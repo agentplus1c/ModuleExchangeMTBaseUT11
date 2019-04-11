@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.FTPАдрес</Field>
+				<Field>Объект.FTPКаталогСервера</Field>
+				<Field>Объект.FTPПароль</Field>
+				<Field>Объект.FTPПассивныйРежим</Field>
+				<Field>Объект.FTPПользователь</Field>
+				<Field>Объект.АвтозапускОбменаДанными</Field>
+				<Field>Объект.ВерсияНастроек</Field>
+				<Field>Объект.ВидВыгрузки</Field>
+				<Field>Объект.ВременныеТаблицы</Field>
+				<Field>Объект.ВыбАгент</Field>
+				<Field>Объект.ВыбНастройкиАгента</Field>
+				<Field>Объект.ВыгружатьЗаказы</Field>
+				<Field>Объект.ВыгружатьИзображенияТоваров</Field>
+				<Field>Объект.ВыгружатьИсториюПродаж</Field>
+				<Field>Объект.ВыгружатьМаршруты</Field>
+				<Field>Объект.ВыгружатьСтартовыеНомера</Field>
+				<Field>Объект.ВыгружатьТоварыСНулевымОстатком</Field>
+				<Field>Объект.ВыгружатьТолькоПросроченныеДолги</Field>
+				<Field>Объект.ВыделятьЦветомПросроченныеДолги</Field>
+				<Field>Объект.ГлубинаИсторииПродаж</Field>
+				<Field>Объект.ЗапросыМобильныхУстройств</Field>
+				<Field>Объект.ИнтервалАвтообмена</Field>
+				<Field>Объект.ИнтервалВыгрузкиЗаказов</Field>
+				<Field>Объект.ИнтервалВыгрузкиМаршрутов</Field>
+				<Field>Объект.ИнтервалПросроченныхДолгов</Field>
+				<Field>Объект.ИспользоватьАвтообмен</Field>
+				<Field>Объект.ИспользоватьКонтрагентов</Field>
+				<Field>Объект.ИспользоватьНумерациюЦБД</Field>
+				<Field>Объект.ИспользоватьТорговыеТочки</Field>
+				<Field>Объект.ИспользоватьХарактеристики</Field>
+				<Field>Объект.КаталогДанных</Field>
+				<Field>Объект.КаталогОбмена</Field>
+				<Field>Объект.КатегорииДокументов</Field>
+				<Field>Объект.КоличествоИнтерваловИстории</Field>
+				<Field>Объект.ЛКЗапомнитьЛогинИПароль</Field>
+				<Field>Объект.ЛКИдентификаторКаналаОбмена</Field>
+				<Field>Объект.ЛКИдентификаторУС</Field>
+				<Field>Объект.ЛКЛогин</Field>
+				<Field>Объект.ЛКНазваниеУС</Field>
+				<Field>Объект.ЛКПароль</Field>
+				<Field>Объект.ЛКПодтверждение</Field>
+				<Field>Объект.ЛКТокенУС</Field>
+				<Field>Объект.МобильныеУстройства</Field>
+				<Field>Объект.НастройкиАгентов</Field>
+				<Field>Объект.ОбновлятьДокументыПриЗагрузке</Field>
+				<Field>Объект.ОтветнаяВыгрузка</Field>
+				<Field>Объект.ОчищатьДокументыПередЗагрузкой</Field>
+				<Field>Объект.ОчищатьСправочникиПередЗагрузкой</Field>
+				<Field>Объект.ПериодХраненияЛогов</Field>
+				<Field>Объект.ПодтвержденияТолькоДляПроведенных</Field>
+				<Field>Объект.ПроводитьДокументыПриЗагрузке</Field>
+				<Field>Объект.РежимЗагрузкиЗаказов</Field>
+				<Field>Объект.СОДАдрес</Field>
+				<Field>Объект.СОДПорт</Field>
+				<Field>Объект.СОДПутьКПанелиУправления</Field>
+				<Field>Объект.СпискиТорговыхТочек</Field>
+				<Field>Объект.СписокОчищаемыхДокументов</Field>
+				<Field>Объект.СписокОчищаемыхСправочников</Field>
+				<Field>Объект.СпособОбмена</Field>
+				<Field>Объект.СтатусыПартнеров</Field>
+				<Field>Объект.ТабСтартовыеНомера</Field>
+				<Field>Объект.УчитыватьРезервы</Field>
+				<Field>Объект.ЦветПросроченныхДолгов</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стрр контекст</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

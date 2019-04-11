@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Журнал обмена данными</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>50</Width>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияИконка" id="3">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация иконка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти на главную страницу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="Click">КомандаПоказатьГлавнуюФорму</Event>
+					</Events>
+				</PictureDecoration>
+				<Button name="ПоказатьГлавнуюФорму" id="6">
+					<Type>Hyperlink</Type>
+					<Representation>PictureAndText</Representation>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<CommandName>Form.Command.ПоказатьГлавнуюФорму</CommandName>
+					<Font ref="style:NormalTextFont" kind="StyleItem"/>
+					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<LabelDecoration name="ДекорацияСмТакже" id="8">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>cм. также:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Смотрите также</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="10"/>
+				</LabelDecoration>
+				<Button name="ПоказатьОбменДанными" id="24">
+					<Type>Hyperlink</Type>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<CommandName>Form.Command.ПоказатьОбменДанными</CommandName>
+					<ExtendedTooltip name="ПоказатьОбменДаннымиРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<Button name="ПоказатьНастройкиАгентов" id="15">
+					<Type>Hyperlink</Type>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<CommandName>Form.Command.ПоказатьНастройкиАгентов</CommandName>
+					<ExtendedTooltip name="ПоказатьНастройкиАгентовРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<PictureDecoration name="ДекорацияКоманднаяПанель" id="19">
+					<Enabled>false</Enabled>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="21"/>
+				</PictureDecoration>
+				<Button name="ФормаСправка" id="22">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.Справка</CommandName>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="23"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапка" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Button name="ОбновитьЖурнал" id="68">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьЖурнал</CommandName>
+					<ExtendedTooltip name="ОбновитьЖурналРасширеннаяПодсказка" id="69"/>
+				</Button>
+				<InputField name="ВыбАгент" id="26">
+					<DataPath>Объект.ВыбАгент</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+					<ClearButton>true</ClearButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ВыбАгентКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ВыбАгентРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">ВыбАгентПриИзменении</Event>
+						<Event name="StartChoice">ВыбАгентНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Период" id="57">
+					<DataPath>Период</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="59"/>
+					<Events>
+						<Event name="OnChange">ПериодПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Журнал" id="29">
+			<Representation>Tree</Representation>
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Журнал</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="ЖурналКонтекстноеМеню" id="30">
+				<ChildItems>
+					<Button name="ЖурналКонтекстноеМенюРазвернуть" id="70">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Развернуть</CommandName>
+						<ExtendedTooltip name="ЖурналКонтекстноеМенюРазвернутьРасширеннаяПодсказка" id="71"/>
+					</Button>
+					<Button name="ЖурналКонтекстноеМенюСвернуть" id="72">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Свернуть</CommandName>
+						<ExtendedTooltip name="ЖурналКонтекстноеМенюСвернутьРасширеннаяПодсказка" id="73"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ЖурналКоманднаяПанель" id="31">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЖурналРасширеннаяПодсказка" id="32"/>
+			<SearchStringAddition name="ЖурналСтрокаПоиска" id="33">
+				<AdditionSource>
+					<Item>Журнал</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЖурналСтрокаПоискаКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ЖурналСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЖурналСостояниеПросмотра" id="36">
+				<AdditionSource>
+					<Item>Журнал</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЖурналСостояниеПросмотраКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ЖурналСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЖурналУправлениеПоиском" id="39">
+				<AdditionSource>
+					<Item>Журнал</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЖурналУправлениеПоискомКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ЖурналУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ЖурналВыбор</Event>
+				<Event name="BeforeRowChange">ЖурналПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ЖурналПредставление" id="62">
+					<DataPath>Журнал.Представление</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мобильное устройство (и текущий торговый агент, использующий это устройство)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЖурналПредставлениеКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ЖурналПредставлениеРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="ЖурналДата" id="51">
+					<DataPath>Журнал.Дата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время загрузки документа в учетную систему</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЖурналДатаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ЖурналДатаРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="ЖурналВидДокумента" id="65">
+					<DataPath>Журнал.ВидДокументаПредставление</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа в 1С:Предприятии (в "Мобильной торговле")</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЖурналВидДокументаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ЖурналВидДокументаРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ЖурналДокумент" id="54">
+					<DataPath>Журнал.Документ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЖурналДокументКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ЖурналДокументРасширеннаяПодсказка" id="56"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.FTPАдрес</Field>
+				<Field>Объект.FTPПароль</Field>
+				<Field>Объект.FTPПользователь</Field>
+				<Field>Объект.АвтозапускОбменаДанными</Field>
+				<Field>Объект.ВерсияНастроек</Field>
+				<Field>Объект.ВидВыгрузки</Field>
+				<Field>Объект.ВременныеТаблицы</Field>
+				<Field>Объект.ВыбАгент</Field>
+				<Field>Объект.ВыбНастройкиАгента</Field>
+				<Field>Объект.ВыгружатьИзображенияТоваров</Field>
+				<Field>Объект.ВыгружатьИсториюПродаж</Field>
+				<Field>Объект.ВыгружатьМаршруты</Field>
+				<Field>Объект.ВыгружатьСтартовыеНомера</Field>
+				<Field>Объект.ВыгружатьТоварыСНулевымОстатком</Field>
+				<Field>Объект.ВыгружатьТолькоПросроченныеДолги</Field>
+				<Field>Объект.ВыделятьЦветомПросроченныеДолги</Field>
+				<Field>Объект.ГлубинаИсторииПродаж</Field>
+				<Field>Объект.ЗапросыМобильныхУстройств</Field>
+				<Field>Объект.ИнтервалАвтообмена</Field>
+				<Field>Объект.ИнтервалВыгрузкиЗаказов</Field>
+				<Field>Объект.ИнтервалПросроченныхДолгов</Field>
+				<Field>Объект.ИспользоватьАвтообмен</Field>
+				<Field>Объект.ИспользоватьКонтрагентов</Field>
+				<Field>Объект.ИспользоватьНумерациюЦБД</Field>
+				<Field>Объект.ИспользоватьТорговыеТочки</Field>
+				<Field>Объект.ИспользоватьХарактеристики</Field>
+				<Field>Объект.КаталогДанных</Field>
+				<Field>Объект.КаталогОбмена</Field>
+				<Field>Объект.КатегорииДокументов</Field>
+				<Field>Объект.КоличествоИнтерваловИстории</Field>
+				<Field>Объект.ЛКЛогин</Field>
+				<Field>Объект.ЛКПароль</Field>
+				<Field>Объект.ОбновлятьДокументыПриЗагрузке</Field>
+				<Field>Объект.ОтветнаяВыгрузка</Field>
+				<Field>Объект.ОчищатьДокументыПередЗагрузкой</Field>
+				<Field>Объект.ОчищатьСправочникиПередЗагрузкой</Field>
+				<Field>Объект.ПериодХраненияЛогов</Field>
+				<Field>Объект.ПодтвержденияТолькоДляПроведенных</Field>
+				<Field>Объект.ПроводитьДокументыПриЗагрузке</Field>
+				<Field>Объект.РежимЗагрузкиЗаказов</Field>
+				<Field>Объект.СОДАдрес</Field>
+				<Field>Объект.СОДПорт</Field>
+				<Field>Объект.СОДПутьКПанелиУправления</Field>
+				<Field>Объект.СписокОчищаемыхДокументов</Field>
+				<Field>Объект.СписокОчищаемыхСправочников</Field>
+				<Field>Объект.СпособОбмена</Field>
+				<Field>Объект.СтатусыПартнеров</Field>
+				<Field>Объект.ТабСтартовыеНомера</Field>
+				<Field>Объект.УчитыватьРезервы</Field>
+				<Field>Объект.ЦветПросроченныхДолгов</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.НастройкиАгентов">
+					<Column name="Пользователь" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Агент</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СсылкаМУ" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ссылка на МУ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.МобильныеУстройства">
+					<Column name="Пользователь" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пользователь</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Наименование" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>64</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ID" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Внутренний уникальный идентификатор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура дополнительных параметров модуля формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Журнал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пользователь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СсылкаМУ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка на МУ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:UUID</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Дата" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МУ (текущий агент)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидДокументаПредставление" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа (в МТ)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидДокумента" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Период" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьГлавнуюФорму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на главную страницу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+M</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьНастройкиАгентов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки агентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать настройки торговых агентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьОбменДанными" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен данными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать окно обмена данными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьЖурнал" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить журнал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Action>КомандаОбновитьЖурнал</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Развернуть" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть дерево журнала</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаРазвернуть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Свернуть" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево журнала</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСвернуть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Справка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+1</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Help</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Удалить" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Удалить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

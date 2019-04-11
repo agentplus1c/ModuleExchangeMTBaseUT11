@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Категории документов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияИконка" id="28">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация иконка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти на главную страницу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="Click">КомандаПоказатьГлавнуюФорму</Event>
+					</Events>
+				</PictureDecoration>
+				<Button name="ПоказатьГлавнуюФорму" id="31">
+					<Type>Hyperlink</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ПоказатьГлавнуюФорму</CommandName>
+					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="32"/>
+				</Button>
+				<LabelDecoration name="ДекорацияСмТакже" id="33">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>cм. также:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Смотрите также</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="35"/>
+				</LabelDecoration>
+				<Button name="ПоказатьНастройкиОбмена" id="45">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьНастройкиМодуля</CommandName>
+					<ExtendedTooltip name="ПоказатьНастройкиОбменаРасширеннаяПодсказка" id="46"/>
+				</Button>
+				<PictureDecoration name="ДекорацияКоманднаяПанель" id="38">
+					<Enabled>false</Enabled>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="40"/>
+				</PictureDecoration>
+				<Button name="СохранитьВсе" id="41">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.СохранитьВсе</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="СохранитьВсеРасширеннаяПодсказка" id="42"/>
+				</Button>
+				<Button name="Справка" id="43">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.Справка</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Help</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>?</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="44"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="КатегорииДокументов" id="1">
+			<Representation>List</Representation>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.КатегорииДокументов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КатегорииДокументовКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="КатегорииДокументовКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="КатегорииДокументовРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="КатегорииДокументовСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>КатегорииДокументов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КатегорииДокументовСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="КатегорииДокументовСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КатегорииДокументовСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>КатегорииДокументов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КатегорииДокументовСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="КатегорииДокументовСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КатегорииДокументовУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>КатегорииДокументов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КатегорииДокументовУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="КатегорииДокументовУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">КатегорииДокументовПередУдалением</Event>
+				<Event name="BeforeEditEnd">КатегорииДокументовПередОкончаниемРедактирования</Event>
+				<Event name="OnChange">КатегорииДокументовПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="КатегорииДокументовИдентификатор" id="14">
+					<DataPath>Объект.КатегорииДокументов.Идентификатор</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КатегорииДокументовИдентификаторКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="КатегорииДокументовИдентификаторРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="КатегорииДокументовНаименование" id="17">
+					<DataPath>Объект.КатегорииДокументов.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КатегорииДокументовНаименованиеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="КатегорииДокументовНаименованиеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="КатегорииДокументовЦвет" id="20">
+					<DataPath>Объект.КатегорииДокументов.Цвет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>true</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="КатегорииДокументовЦветКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КатегорииДокументовЦветРасширеннаяПодсказка" id="22"/>
+					<Events>
+						<Event name="StartChoice">КатегорииДокументовЦветНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="КатегорииДокументовСписокДокументов" id="23">
+					<DataPath>Объект.КатегорииДокументов.СписокДокументов</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список видов документов, для которых применяется категория.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="КатегорииДокументовСписокДокументовКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="КатегорииДокументовСписокДокументовРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="StartChoice">КатегорииДокументовСписокДокументовНачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.FTPАдрес</Field>
+				<Field>Объект.FTPПароль</Field>
+				<Field>Объект.FTPПользователь</Field>
+				<Field>Объект.ВерсияНастроек</Field>
+				<Field>Объект.ВидВыгрузки</Field>
+				<Field>Объект.ВыбАгент</Field>
+				<Field>Объект.ВыбНастройкиАгента</Field>
+				<Field>Объект.ВыгружатьИзображенияТоваров</Field>
+				<Field>Объект.ВыгружатьИсториюПродаж</Field>
+				<Field>Объект.ВыгружатьМаршруты</Field>
+				<Field>Объект.ВыгружатьСтартовыеНомера</Field>
+				<Field>Объект.ВыгружатьТоварыСНулевымОстатком</Field>
+				<Field>Объект.ВыгружатьТолькоПросроченныеДолги</Field>
+				<Field>Объект.ВыделятьЦветомПросроченныеДолги</Field>
+				<Field>Объект.ГлубинаИсторииПродаж</Field>
+				<Field>Объект.ЗапросыМобильныхУстройств</Field>
+				<Field>Объект.ИнтервалВыгрузкиЗаказов</Field>
+				<Field>Объект.ИнтервалПросроченныхДолгов</Field>
+				<Field>Объект.ИспользоватьАвтообмен</Field>
+				<Field>Объект.ИспользоватьКонтрагентов</Field>
+				<Field>Объект.ИспользоватьНумерациюЦБД</Field>
+				<Field>Объект.ИспользоватьТорговыеТочки</Field>
+				<Field>Объект.ИспользоватьХарактеристики</Field>
+				<Field>Объект.КаталогОбмена</Field>
+				<Field>Объект.КоличествоИнтерваловИстории</Field>
+				<Field>Объект.МобильныеУстройства</Field>
+				<Field>Объект.НастройкиАгентов</Field>
+				<Field>Объект.ОбновлятьДокументыПриЗагрузке</Field>
+				<Field>Объект.ОчищатьДокументыПередЗагрузкой</Field>
+				<Field>Объект.ОчищатьСправочникиПередЗагрузкой</Field>
+				<Field>Объект.ПериодХраненияЛогов</Field>
+				<Field>Объект.ПроводитьДокументыПриЗагрузке</Field>
+				<Field>Объект.РежимЗагрузкиЗаказов</Field>
+				<Field>Объект.СОДАдрес</Field>
+				<Field>Объект.СОДПорт</Field>
+				<Field>Объект.СписокОчищаемыхДокументов</Field>
+				<Field>Объект.СписокОчищаемыхСправочников</Field>
+				<Field>Объект.СпособОбмена</Field>
+				<Field>Объект.ТабСтартовыеНомера</Field>
+				<Field>Объект.УчитыватьРезервы</Field>
+				<Field>Объект.ЦветПросроченныхДолгов</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.КатегорииДокументов">
+					<Column name="Идентификатор" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Идентификатор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Наименование" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>250</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Цвет" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Цвет</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8ui:Color</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СписокДокументов" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Список видов документов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:ValueListType</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стрр контекст</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить все изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Action>КомандаСохранитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьГлавнуюФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на главную страницу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+M</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьНастройкиМодуля" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать настройки модуля обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Справка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+1</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

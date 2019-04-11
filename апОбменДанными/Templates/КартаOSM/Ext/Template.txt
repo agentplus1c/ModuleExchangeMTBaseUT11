@@ -1,0 +1,378 @@
+﻿<!--
+Пример использования сервиса OpenStreetMap.
+Условия использования сервиса: http://www.openstreetmap.org/copyright
+
+Версия скрипта 2.0 от 05.02.17
+ -->
+
+<HTML>														
+	
+	<!-- vd_181128 добавлен HEAD -->
+	<HEAD>
+		
+		<!-- vd_181128 -->
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<!-- vd_181128 -->
+														
+		<title>	OSM maps API </title>
+
+		<style>
+			html,body {
+				padding:0px;
+				margin:0px;
+				height:100%;
+				overflow:hidden;
+			}
+		</style>
+							
+		<!-- vd_181128 /STYLE>														
+		<!-- vd_181128 meta http-equiv="X-UA-Compatible" content="IE=Edge" /-->
+		<!-- vd_181128 META content="text/html; charset=utf-8" http-equiv=Content-Type-->														
+
+		<script src="http://www.openlayers.org/api/OpenLayers.js" type="text/javascript"></script>
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 														
+
+		<script type="text/javascript">														
+
+		    var myMap;
+			var layerListeners;
+		    var lmarkers;
+		    var lpolyline;
+		    var popup = null    
+		  	var panelIsVisible = false;	
+			var MousePositionControl;
+		    
+			
+			//{{vd_181119
+			//Было:
+			//window.onload = function() {
+		    //	initialize();
+		    //} 	
+				
+				var initializeOK = false;  // Скрипт загружен и готов к работе
+				var onloadOK     = false;  // Сработал onload. Если initializeOK = false то скрипт больше не загрузится, нужно перегружать страничку.
+						
+				window.onload = function()
+				{
+					if(this.OpenLayers !== undefined) {
+						initialize();
+					} 
+					onloadOK = true; 			
+				}
+			//}}vd_181119              														
+							
+			
+			function initialize() {
+
+				var MapCenter = new OpenLayers.LonLat(37.64, 55.76); // Москва
+				
+				//получим координаты центра карты
+				var arCenter = window.name.split("@");
+				if (arCenter.length == 3 && arCenter[0] != 0 ) {
+					window.name = arCenter[2];
+					MapCenter = new OpenLayers.LonLat(arCenter[1], arCenter[0]);
+				}
+					
+			   myMap = new OpenLayers.Map( { div: 'map_canvas' } );
+		 
+			   myMap.addControl(new OpenLayers.Control.LayerSwitcher());	// слои	
+			   
+			   MousePositionControl = new OpenLayers.Control.MousePosition();
+			   myMap.addControl(MousePositionControl);
+			   
+			   myMap.addControl(new OpenLayers.Control.ScaleLine());	    // линейка масштаба       
+			   myMap.addControl(new OpenLayers.Control.OverviewMap());    	// обзорная карта
+			   myMap.addControl(new OpenLayers.Control.KeyboardDefaults()); // обзорная карта
+		      
+		       myMap.addLayer(new OpenLayers.Layer.OSM());
+		       myMap.setCenter(MapCenter // Центр карты
+		       	   .transform(
+		           	new OpenLayers.Projection("EPSG:4326"),         // преобразование из WGS 1984
+		           	new OpenLayers.Projection("EPSG:900913")        // в Spherical Mercator Projection
+		           ), 13 // Уровень масштаба
+		       );				
+			   
+			  AddLayers();
+		      
+			  var Ed = window.name.indexOf("LabelEditor");
+			
+			  if (Ed == 0) {		
+					myMap.events.register('click', myMap, function (e) {
+					
+						var size = new OpenLayers.Size(21, 25);//размер картинки для маркера
+						
+						var lonlat = inverseMercator(myMap.getLonLatFromViewPortPx(e.xy));
+						
+						var sCoords = ConvertWGS84NMEA(lonlat.lat).toFixed(4) + ", " + ConvertWGS84NMEA(lonlat.lon).toFixed(4);
+						
+						RemovePopup();
+						
+						popup = new OpenLayers.Popup.FramedCloud("1", myMap.getLonLatFromViewPortPx(e.xy), new OpenLayers.Size(400, 100), sCoords, null, true, null);
+						
+						myMap.addPopup(popup);
+						
+						var button = document.getElementById("ClickEvent");
+						button.apObjectType = "map";
+						button.apObjectID   = "";
+						button.apValue 	    = sCoords;
+						
+						button.click();
+					}); 
+								
+				};
+				
+			initializeOK = true; //vd_181119			
+			}   
+			
+			
+			
+			function RemovePopup() {											
+			      if (popup != null) { 
+					myMap.removePopup(popup);	
+					delete popup;
+				  }
+			}
+		          
+			function onMarkerClick(event) {											
+				
+				RemovePopup();
+
+			    text = '<STRONG>' + this.title + '</STRONG>' + //'<a href="http://www.agentplus.ru/">Открыть карточку</a>' +  
+						 '<br>' + this.body + 
+						 '<br><FONT style="BACKGROUND-COLOR: #f5f2dd" size=2>' + this.footer + '</FONT>';
+			
+				var Obj = new Object();														
+				Obj.size = new OpenLayers.Size(10, 10);														
+				Obj.offset = new OpenLayers.Pixel(0, 0);														
+				popup = new OpenLayers.Popup.FramedCloud("mypopup", this.lonLat, new OpenLayers.Size(400, 100), text, Obj, true, null);
+				myMap.addPopup(popup);
+				OpenLayers.Event.stop(event);														
+			}						
+			
+			
+			//вывод маркера на карту
+			function setMarker(lat, lon, icon, Header, Body, Footer, Help) {
+			
+				var pos = ConvertToMercatorProjection(new OpenLayers.LonLat(Convert(lon), Convert(lat)));		
+				
+				if (icon == "")
+					var newMarker = new OpenLayers.Marker(pos); 		  	
+				else {
+					var size = new OpenLayers.Size(32, 32);
+					var offset = new OpenLayers.Pixel(-16, -32);
+					var icon = new OpenLayers.Icon(icon, size, offset);
+					var newMarker = new OpenLayers.Marker(pos, icon);
+				}					
+				
+				newMarker.lonLat = pos;
+				newMarker.title  = Header;
+				newMarker.body   = Body;		
+				newMarker.footer = Footer;		
+				newMarker.events.register("click", newMarker, onMarkerClick);
+				
+				lmarkers.addMarker(newMarker);
+			}
+			
+			function GoToMarker(lat, lon) {
+				
+				var pos = ConvertToMercatorProjection(new OpenLayers.LonLat(Convert(lon), Convert(lat)));
+				
+				var bounds = new OpenLayers.Bounds(pos.lon, pos.lat, pos.lon, pos.lat);
+				
+				myMap.zoomToExtent(bounds, true);
+				
+			}
+			
+			function SetBounds(lat1, lon1, lat2, lon2) {
+
+				var pos1 = ConvertToMercatorProjection(new OpenLayers.LonLat(Convert(lon1), Convert(lat1)));
+				var pos2 = ConvertToMercatorProjection(new OpenLayers.LonLat(Convert(lon2), Convert(lat2)));
+				 
+				var bounds = new OpenLayers.Bounds(pos1.lon, pos1.lat, pos2.lon, pos2.lat);
+				myMap.zoomToExtent(bounds, true);				     			
+					
+			}
+			
+			function setPolyline(pointsLat, pointsLon, pointsTimes, strokeColor, strokeWidth, strokeStyle, opacity, strPolygone,  strDuration, strDistance, strHint, strID) {
+			 
+				var arPointsLat = pointsLat.split(";");   // Точки широты маршрута
+				var arPointsLon = pointsLon.split(";");	  // Точки долготы маршрута	
+				//var arPointsPol  = strPolygone.split(";"); // Точки полигона трека
+				var arPointsTime = pointsTimes == "" ? null : pointsTimes.split(";"); // Время точек
+				
+				var length = arPointsLat.length;
+				
+				var path = new Array();
+				
+				for (var i=0; i<length; i++)				
+				{      
+					var myLatlng = ConvertToMercatorProjection(new OpenLayers.LonLat(Convert(arPointsLon[i]), Convert(arPointsLat[i])));
+					path[i] = new OpenLayers.Geometry.Point(myLatlng.lon, myLatlng.lat);
+				}
+							
+				var newLine = new OpenLayers.Geometry.LineString(path);
+				var style = {
+					strokeColor: strokeColor,
+					strokeWidth: strokeWidth,
+					strokeOpacity: opacity,
+					strokeDashstyle: "solid"//,
+					//title: strHint
+				};
+				
+				var lineFeature = new OpenLayers.Feature.Vector(newLine, {}, style);
+				lineFeature["APID"]   = strID;
+				lineFeature["Legend"] = strHint;
+				lineFeature["arTime"] = arPointsTime;
+				
+				lpolyline.addFeatures([lineFeature]);
+				
+		    }			
+		    
+				
+			function ClearCollection() 
+			{  		
+				if (myMap == null)
+					return
+				
+				// Удаляем все что было отображено ранее 
+				while (myMap.layers.length > 1) 
+					myMap.removeLayer(myMap.layers[1]);
+					
+				AddLayers();
+				
+			} 	
+			
+			function AddLayers()  {  	
+				
+				// Линия маршрута    
+				layer_style = OpenLayers.Util.extend({}, OpenLayers.Feature.Vector.style['default']); // Стиль
+				layer_style.fillOpacity = 1.0;
+				layer_style.graphicOpacity = 1.0;      
+				lpolyline = new OpenLayers.Layer.Vector("Линия", { style: layer_style });
+				myMap.addLayer(lpolyline);
+
+				myMap.addControl(new OpenLayers.Control.SelectFeature(
+				lpolyline,
+					{
+					hover: true,
+					onSelect: function(f) {
+						var lonlat = myMap.getLonLatFromViewPortPx(MousePositionControl.lastXy);
+						setPolylineLegend(f, lonlat);
+						},
+						autoActivate: true
+					})
+				);
+				
+				// Метки
+				lmarkers = new OpenLayers.Layer.Markers("Метки");
+				myMap.addLayer(lmarkers);
+
+			}
+			
+			function setPolylineLegend(polyline, lonlat) {
+				var path 	= polyline.geometry.getVertices(); 
+				var minDist = 1000000000;
+				var len = path.length;
+				
+				var point = new OpenLayers.Geometry.Point(lonlat.lon, lonlat.lat);
+				var besti = null;
+				
+				for (var i = 0; i < len; ++i) {
+					var dist = point.distanceTo(path[i]) / 1000;
+					if (dist < minDist) {
+						minDist = dist;
+						besti = i;
+					}
+				}
+				
+				if( besti != null ) {
+
+					var newlonlat = new OpenLayers.LonLat(path[besti].x, path[besti].y);
+					var title = polyline.Legend;
+					
+					if( polyline.arTime != null )
+						title = title + " - " + polyline.arTime[besti];
+					
+					RemovePopup();
+					var text = "<div style='font-size:12px'>" + title + "</div>";
+					popup = new OpenLayers.Popup.FramedCloud("mypopup", newlonlat, new OpenLayers.Size(300, 30), text, null, true, null);			  
+					myMap.addPopup(popup);
+				}
+			}
+			
+			function Convert(coor)  {  	
+				var flTemp =  coor;
+				var nTemp =  flTemp / 100.0;  
+				nTemp = nTemp - (nTemp%1); 
+				var flMin = flTemp - 100.0 * nTemp;
+				var Co = nTemp + flMin / 60.0;
+				result = Co.toFixed(6);
+												
+				return result;		 
+			} 												
+		     
+		    function ConvertToMercatorProjection(lonLat) {        
+			    return latlng = lonLat.transform(
+			       new OpenLayers.Projection("EPSG:4326"),      // преобразование из WGS 1984
+			       new OpenLayers.Projection("EPSG:900913")     // в Spherical Mercator Projection
+			    );
+		    }
+		    
+		    function showPanel() {    	
+				_map_canvas = document.getElementById("map_canvas");
+				_panel = document.getElementById("directions_panel");
+				
+				if (panelIsVisible == false)  
+			    {  
+			        _map_canvas.style.width='70%';  
+			        panelIsVisible = true;                   
+			    }  
+			   	else  
+			    {  
+			        _map_canvas.style.width='100%';  
+			        panelIsVisible = false;
+			    }	    
+			}  
+
+			
+			//Given a x,y in Spherical Mercator, return a point in EPSG:4326.
+			function inverseMercator(lonlatpx) {
+
+		        var lon = (lonlatpx.lon / 20037508.34) * 180;
+		        var lat = (lonlatpx.lat / 20037508.34) * 180;
+
+		        lat = 180/Math.PI * (2 * Math.atan(Math.exp(lat * Math.PI / 180)) - Math.PI / 2);
+		       
+		        return new OpenLayers.LonLat(lon, lat);
+		    }
+			
+
+			function ConvertWGS84NMEA(coor) {
+				NMEA_coord = Math.floor(coor) * 100 + (coor - Math.floor(coor)) * 60;
+				
+				return NMEA_coord;
+			}
+			  
+	 														
+		</SCRIPT>														
+
+		<META name=GENERATOR content="MSHTML 8.00.7600.16671">                                          
+		<LINK rel=stylesheet type=text/css href="http://www.openlayers.org/api/theme/default/style.css">
+
+	</HEAD> 
+
+	<BODY>
+	
+		<form id="formInfo">
+			<input style="display:none" id="routeInfo" type="button" value="Показать панель" onclick="showPanel();" />
+		</form>
+		<div id="map_canvas" style="float:left;width:100%;height:100%;"></div>
+		<input id="closePanel" type="button" value="Скрыть панель" onclick="showPanel();" />
+		<div id="directions_panel" style="height:100%;overflow-y:scroll;background-color:#FFEE77;margin:10px;border-width:2px;"></div>	
+		<input id="ClickEvent" style="display:none" type=button apObjectType="" apObjectID="" apValue="" />
+	
+	</BODY> 
+
+
+</HTML>

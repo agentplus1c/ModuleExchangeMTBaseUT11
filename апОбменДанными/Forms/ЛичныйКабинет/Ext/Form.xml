@@ -1,0 +1,769 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Личный кабинет</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияИконка" id="3">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация иконка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти на главную страницу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="Click">КомандаПоказатьГлавнуюФорму</Event>
+					</Events>
+				</PictureDecoration>
+				<Button name="ПоказатьГлавнуюФорму" id="6">
+					<Type>Hyperlink</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ПоказатьГлавнуюФорму</CommandName>
+					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<LabelDecoration name="ДекорацияСмТакже" id="8">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>cм. также:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Смотрите также</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="10"/>
+				</LabelDecoration>
+				<Button name="ЛКВойти" id="43">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ЛКВойтиЧерезБраузер</CommandName>
+					<ExtendedTooltip name="ЛКВойтиРасширеннаяПодсказка" id="44"/>
+				</Button>
+				<Button name="ПоказатьНастройкиОбмена" id="11">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьНастройкиМодуля</CommandName>
+					<ExtendedTooltip name="ПоказатьНастройкиОбменаРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<PictureDecoration name="ДекорацияКоманднаяПанель" id="13">
+					<Enabled>false</Enabled>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="15"/>
+				</PictureDecoration>
+				<Button name="СохранитьВсе" id="16">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.СохранитьВсе</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="СохранитьВсеРасширеннаяПодсказка" id="17"/>
+				</Button>
+				<Button name="Справка" id="18">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.Справка</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>?</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="19"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛичныйКабинет" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа личный кабинет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛичныйКабинетРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛКАвторизация" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авторизация в "Личном кабинете"</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ЛКАвторизация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<BackColor>style:ToolTipBackColor</BackColor>
+					<ExtendedTooltip name="ГруппаЛКАвторизацияРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияЛКЛоготип" id="24">
+							<Width>9</Width>
+							<Height>4</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация ЛКЛоготип</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Abs>Picture.png</xr:Abs>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияЛКЛоготипКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ДекорацияЛКЛоготипРасширеннаяПодсказка" id="26"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаЛКАвторизацияПоля" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКАвторизация поля</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКАвторизация поля</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛКАвторизацияПоляРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<InputField name="ЛКЛогин" id="37">
+									<DataPath>Объект.ЛКЛогин</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Логин</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЛКЛогинКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ЛКЛогинРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="OnChange">ЭлементФормыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаПароль" id="90">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пароль</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пароль</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПарольРасширеннаяПодсказка" id="91"/>
+									<ChildItems>
+										<InputField name="ЛКПароль" id="40">
+											<DataPath>Объект.ЛКПароль</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пароль</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ЛКПарольКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="ЛКПарольРасширеннаяПодсказка" id="42"/>
+											<Events>
+												<Event name="OnChange">ЭлементФормыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="ЛКЗапомнитьЛогинИПароль" id="87">
+											<DataPath>Объект.ЛКЗапомнитьЛогинИПароль</DataPath>
+											<TitleFont ref="style:NormalTextFont" kind="StyleItem" scale="80"/>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>CheckBox</CheckBoxType>
+											<ContextMenu name="ЛКЗапомнитьЛогинИПарольКонтекстноеМеню" id="88"/>
+											<ExtendedTooltip name="ЛКЗапомнитьЛогинИПарольРасширеннаяПодсказка" id="89"/>
+											<Events>
+												<Event name="OnChange">ЭлементФормыПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ЛКПроверитьПодключение" id="100">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЛКПроверитьПодключение</CommandName>
+									<ExtendedTooltip name="ЛКПроверитьПодключениеРасширеннаяПодсказка" id="101"/>
+								</Button>
+								<Button name="ЛКЧтоТакоеЛК" id="104">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЛКЧтоТакоеЛК</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Что такое "Личный кабинет"?</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ЛКЧтоТакоеЛКРасширеннаяПодсказка" id="105"/>
+								</Button>
+								<Button name="ЛКНетДоступа" id="102">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЛКНетДоступа</CommandName>
+									<ExtendedTooltip name="ЛКНетДоступаРасширеннаяПодсказка" id="103"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЛКТитул" id="45">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКТитул</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКТитул</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛКТитулРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияЛКТитулОтступ" id="47">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ДекорацияЛКТитулОтступКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ДекорацияЛКТитулОтступРасширеннаяПодсказка" id="49"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФлагРегистрация" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа флаг регистрация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа флаг регистрация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФлагРегистрацияРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияОтступ" id="82">
+							<Height>1</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Overline</v8ui:style>
+							</Border>
+							<ContextMenu name="ДекорацияОтступКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ДекорацияОтступРасширеннаяПодсказка" id="84"/>
+						</PictureDecoration>
+						<CheckBoxField name="ЛКРегистрацияУС" id="52">
+							<DataPath>ФлагЛКРегистрацияУС</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЛКРегистрацияУСКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ЛКРегистрацияУСРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">ЛКРегистрацияУСПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ДекорацияЛКРегистрацияУчетнойСистемы" id="55">
+							<Width>80</Width>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрация конфигурации 1С:Предприятия в "Личном кабинете" позволяет:
+  ♦ Упростить настройку обмена данными между конфигурацией 1С:Предприятия и мобильными устройствами.
+  ♦ Автоматически получать обновления модуля обмена данными с учетом версии конфигурации 1С:Предприятия.
+  ♦ Обмениваться данными с мобильными устройствами с использованием функционала обмена из "Личного кабинета".
+  ♦ Сохранять и получать настройки модуля обмена из "Личного кабинета".</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЛКРегистрацияУчетнойСистемыКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ДекорацияЛКРегистрацияУчетнойСистемыРасширеннаяПодсказка" id="57"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛКРегистрация" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения о регистрации учетной системы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ЛКРегистрация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаЛКРегистрацияРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛКДействияРегистрация" id="58">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКДействия регистрация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКДействия регистрация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛКДействияРегистрацияРасширеннаяПодсказка" id="59"/>
+							<ChildItems>
+								<InputField name="ЛКНазваниеУС" id="60">
+									<DataPath>Объект.ЛКНазваниеУС</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="ЛКНазваниеУСКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ЛКНазваниеУСРасширеннаяПодсказка" id="62"/>
+									<Events>
+										<Event name="OnChange">ЭлементФормыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<Button name="ЛКЗарегистрировать" id="63">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЛКЗарегистрироватьУС</CommandName>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ExtendedTooltip name="ЛКЗарегистрироватьРасширеннаяПодсказка" id="64"/>
+								</Button>
+								<InputField name="ЛКИдентификаторУС" id="65">
+									<DataPath>Объект.ЛКИдентификаторУС</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЛКИдентификаторУСКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ЛКИдентификаторУСРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<InputField name="ЛКТокенУС" id="68">
+									<DataPath>Объект.ЛКТокенУС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Токен передачи данных</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ЛКТокенУСКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ЛКТокенУСРасширеннаяПодсказка" id="70"/>
+									<Events>
+										<Event name="OnChange">ЭлементФормыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаДействия" id="98">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действия</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действия с учетной системой в "Личном кабинете"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Collapsible</Behavior>
+									<Collapsed>true</Collapsed>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаДействияРасширеннаяПодсказка" id="99"/>
+									<ChildItems>
+										<Button name="ЛКОтменитьРегистрациюУС" id="71">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЛКОтменитьРегистрациюУС</CommandName>
+											<ExtendedTooltip name="ЛКОтменитьРегистрациюУСРасширеннаяПодсказка" id="72"/>
+										</Button>
+										<Button name="ЛКОбновитьСведенияУС" id="85">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЛКОбновитьСведенияУС</CommandName>
+											<ExtendedTooltip name="ЛКОбновитьСведенияУСРасширеннаяПодсказка" id="86"/>
+										</Button>
+										<Button name="СброситьРегистрациюУС" id="92">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СброситьРегистрациюУС</CommandName>
+											<ExtendedTooltip name="СброситьРегистрациюУСРасширеннаяПодсказка" id="93"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ЛКРазблокироватьТокен" id="96">
+					<Type>UsualButton</Type>
+					<Visible>false</Visible>
+					<CommandName>Form.Command.ЛКРазблокироватьТокен</CommandName>
+					<ExtendedTooltip name="ЛКРазблокироватьТокенРасширеннаяПодсказка" id="97"/>
+				</Button>
+				<PictureDecoration name="ЛКДекорацияОжиданиеОтвета" id="77">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидание ответа...</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидание ответа...</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ЛКДекорацияОжиданиеОтветаКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ЛКДекорацияОжиданиеОтветаРасширеннаяПодсказка" id="79">
+						<TextColor>style:FormTextColor</TextColor>
+					</ExtendedTooltip>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура дополнительных параметров модуля формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ФлагЛКРегистрацияУС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация учетной системы в ЛК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтррОперацииЛК" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура названий команд API для взаимодействия с Личным кабинетом</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьГлавнуюФорму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на главную страницу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+M</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьНастройкиМодуля" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать настройки модуля обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить все изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Action>КомандаСохранитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКВойтиЧерезБраузер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в "Личный кабинет"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вход "Личный кабинет" (agentplus.online) через браузер.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКВойтиЧерезБраузер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКЗарегистрироватьУС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать учетную систему</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать конфигурацию 1С:Предприятия в "Личном кабинете"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКЗарегистрироватьУС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКОтменитьРегистрациюУС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию учетной системы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить регистрацию учетной системы в "Личном кабинете".</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКОтменитьРегистрациюУС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКОбновитьСведенияУС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить сведения об учетной системе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить сведения об учетной системе в "Личном кабинете".</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКОбновитьСведенияУС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СброситьРегистрациюУС" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить регистрацию учетной системы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить сведения о регистрации учетной системы - в учетной системе очищаются данные о регистрации. Операция выполняется без обращения к "Личному кабинету".</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСброситьРегистрациюУС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКРазблокироватьТокен" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЛКРазблокировать токен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЛКРазблокировать токен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКРазблокироватьТокен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКПроверитьПодключение" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение к "Личному кабинету"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКПроверитьПодключение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Справка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+1</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Help</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКНетДоступа" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>У меня нет доступа в "Личный кабинет"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЛКНет доступа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКНетДоступа</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЛКЧтоТакоеЛК" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЛКЧто такое ЛК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЛКЧто такое ЛК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЛКЧтоТакоеЛК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

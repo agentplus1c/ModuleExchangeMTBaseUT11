@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Техническая поддержка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОписаниеТехподдержки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание техподдержки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание техподдержки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОписаниеТехподдержкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="ЛоготипКомпании" id="3">
+					<Width>10</Width>
+					<Height>4</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Логотип компании</v8:content>
+						</v8:item>
+					</Title>
+					<PictureSize>Proportionally</PictureSize>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ЛоготипКомпанииКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ЛоготипКомпанииРасширеннаяПодсказка" id="5"/>
+				</PictureDecoration>
+				<LabelDecoration name="Техподдержка" id="6">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Все клиенты и партнеры компании "Агент Плюс" могут направить вопрос специалистам технической поддержки и бесплатно получить квалифицированную консультацию.
+Технические специалисты "Агент Плюс" оказывают комплексную поддержку по всем программным продуктам, начиная с консультаций по функционалу мобильных приложений и заканчивая консультациями по внедрению, запуску системы и решению вопросов, возникающих в процессе работы с приложениями.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ТехподдержкаКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ТехподдержкаРасширеннаяПодсказка" id="8"/>
+				</LabelDecoration>
+				<PictureDecoration name="Растяжитель" id="60">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Растяжитель</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РастяжительКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="РастяжительРасширеннаяПодсказка" id="62"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="КонтактыТехническойПоддержки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакты службы технической поддержки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакты технической поддержки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="КонтактыТехническойПоддержкиРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<UsualGroup name="КонтактныйТелефон" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактный телефон</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактный телефон</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КонтактныйТелефонРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<LabelDecoration name="Телефон" id="11">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>телефоны:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТелефонКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="13"/>
+						</LabelDecoration>
+						<LabelDecoration name="НомерТелефона" id="24">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>8 (800) 505-18-23; +7 (495) 287-69-31</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НомерТелефонаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="НомерТелефонаРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ЭлектронныйАдрес" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронный адрес</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронный адрес</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЭлектронныйАдресРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<LabelDecoration name="ЭлектроннаяПочта" id="16">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>электронная почта:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ЭлектроннаяПочтаКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ЭлектроннаяПочтаРасширеннаяПодсказка" id="18"/>
+						</LabelDecoration>
+						<LabelDecoration name="АдресПочты" id="19">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>support@agentplus.ru</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="АдресПочтыКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="АдресПочтыРасширеннаяПодсказка" id="21"/>
+							<Events>
+								<Event name="Click">АдресПочтыНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ОбратныйЗвонок" id="27">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>заказать обратный звонок</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ОбратныйЗвонокКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ОбратныйЗвонокРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="Click">ОбратныйЗвонокНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛичныйКабинет" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа личный кабинет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаЛичныйКабинетРасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЛК" id="68">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В "Личном кабинете" Вы также можете отправить запрос в техническую поддержку, а также получить доступ ко всем актуальным дистрибутивам компании "Агент Плюс".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЛККонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДекорацияЛКРасширеннаяПодсказка" id="70"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияЛКСсылка" id="71">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>agentplus.online</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияЛКСсылкаКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ДекорацияЛКСсылкаРасширеннаяПодсказка" id="73"/>
+					<Events>
+						<Event name="Click">ДекорацияЛКСсылкаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Дистрибутивы" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дистрибутивы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дистрибутивы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ДистрибутивыРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<LabelDecoration name="ОбщаяИнформацияПоДистрибутивам" id="32">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На сайте компании в разделе "Скачать" доступны все необходимые материалы: демо-версии и дистрибутивы обновлений программных продуктов, документация, презентации, видеоролики.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбщаяИнформацияПоДистрибутивамКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ОбщаяИнформацияПоДистрибутивамРасширеннаяПодсказка" id="34"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДистрибутивМТБазовая" id="35">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Агент Плюс: Мобильная торговля Базовая</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДистрибутивМТБазоваяКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДистрибутивМТБазоваяРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="Click">ДистрибутивМТБазоваяНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="ДистрибутивПлатформы" id="63">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платформа "Агент Плюс 2.0"</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДистрибутивПлатформыКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДистрибутивПлатформыРасширеннаяПодсказка" id="65"/>
+					<Events>
+						<Event name="Click">ДистрибутивПлатформыНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="РазделМодулей" id="38">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Также бесплатно доступны для скачивания другие продукты:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РазделМодулейКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РазделМодулейРасширеннаяПодсказка" id="40"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДистрибутивУТ" id="41">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продукты Агент Плюс</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДистрибутивУТКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДистрибутивУТРасширеннаяПодсказка" id="43"/>
+					<Events>
+						<Event name="Click">ПродуктыАгентПлюсНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПриобретениеПП" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приобретение и внедрение программных продуктов "Агент Плюс"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приобретение ПП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ПриобретениеППРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеПриобретения" id="46">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнерская сеть компании "Агент Плюс" насчитывает более 1600 компаний.
+Партнеры окажут квалифицированную помощь в приобретении и внедрении программных продуктов "Агент Плюс", а также дадут рекомендации по выбору оборудования.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеПриобретенияКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ОписаниеПриобретенияРасширеннаяПодсказка" id="48"/>
+				</LabelDecoration>
+				<LabelDecoration name="ВыбратьПартнера" id="49">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать партнера</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ВыбратьПартнераКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ВыбратьПартнераРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="Click">ВыбратьПартнераНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Контакты" id="52">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="КонтактыРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<LabelDecoration name="ОбщиеСведения" id="54">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ООО "Агент Плюс"</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбщиеСведенияКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="ОбщиеСведенияРасширеннаяПодсказка" id="56"/>
+				</LabelDecoration>
+				<LabelDecoration name="АдресСайта" id="57">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>www.agentplus.ru</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="АдресСайтаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="АдресСайтаРасширеннаяПодсказка" id="59"/>
+					<Events>
+						<Event name="Click">АдресСайтаНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура дополнительных параметров модуля формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+</Form>

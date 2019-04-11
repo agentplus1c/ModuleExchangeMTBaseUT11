@@ -1,0 +1,1102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Редактор меток на карте</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияИконка" id="3">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация иконка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти на главную страницу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="Click">КомандаПоказатьГлавнуюФорму</Event>
+					</Events>
+				</PictureDecoration>
+				<Button name="ПоказатьГлавнуюФорму" id="6">
+					<Type>Hyperlink</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ПоказатьГлавнуюФорму</CommandName>
+					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="7"/>
+				</Button>
+				<LabelDecoration name="ДекорацияСмТакже" id="8">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>cм. также:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Смотрите также</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="10"/>
+				</LabelDecoration>
+				<Button name="ПоказатьПартнеров" id="13">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьПартнеров</CommandName>
+					<ExtendedTooltip name="ПоказатьПартнеровРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="ПоказатьСпискиТТ" id="11">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьСпискиТорговыхТочек</CommandName>
+					<ExtendedTooltip name="ПоказатьСпискиТТРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<PictureDecoration name="ДекорацияКоманднаяПанель" id="15">
+					<Enabled>false</Enabled>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="17"/>
+				</PictureDecoration>
+				<Button name="Сохранить" id="79">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.Сохранить</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="80"/>
+				</Button>
+				<Button name="ФормаСправка" id="18">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<CommandName>Form.Command.Справка</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>?</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="19"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРабочаяОбласть" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рабочая область</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа рабочая область</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРабочаяОбластьРасширеннаяПодсказка" id="62"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛеваяОбласть" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая область</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая область</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяОбластьРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<Table name="Партнеры" id="22">
+							<Representation>List</Representation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Партнеры</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПартнерыКонтекстноеМеню" id="23">
+								<ChildItems>
+									<Button name="ПартнерыКонтекстноеМенюОпределитьКоординатыПоАдресу" id="85">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОпределитьКоординатыПоАдресу</CommandName>
+										<ExtendedTooltip name="ПартнерыКонтекстноеМенюОпределитьКоординатыПоАдресуРасширеннаяПодсказка" id="86"/>
+									</Button>
+									<ButtonGroup name="ПартнерыКонтекстноеМенюФлажок" id="87">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Партнеры контекстное меню флажок</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Партнеры контекстное меню флажок</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ПартнерыКонтекстноеМенюФлажокРасширеннаяПодсказка" id="88"/>
+										<ChildItems>
+											<Button name="ПартнерыКонтекстноеМенюУстановитьПризнакИзмененияКоординат" id="83">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.УстановитьПризнакИзмененияКоординат</CommandName>
+												<ExtendedTooltip name="ПартнерыКонтекстноеМенюУстановитьПризнакИзмененияКоординатРасширеннаяПодсказка" id="84"/>
+											</Button>
+											<Button name="ПартнерыКонтекстноеМенюСнятьПризнакИзмененияКоординат" id="81">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СнятьПризнакИзмененияКоординат</CommandName>
+												<ExtendedTooltip name="ПартнерыКонтекстноеМенюСнятьПризнакИзмененияКоординатРасширеннаяПодсказка" id="82"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="ПартнерыКонтекстноеМенюСортироватьПоТочностиКоординат" id="108">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СортироватьПоТочностиКоординат</CommandName>
+										<ExtendedTooltip name="ПартнерыКонтекстноеМенюСортироватьПоТочностиКоординатРасширеннаяПодсказка" id="109"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ПартнерыКоманднаяПанель" id="24">
+								<ChildItems>
+									<Popup name="ПартнерыГруппаПодбор" id="71">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подбор</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Партнеры группа подбор</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ПартнерыГруппаПодборРасширеннаяПодсказка" id="72"/>
+										<ChildItems>
+											<Button name="ПартнерыПодборПартнеров" id="73">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПодборПартнеровИзСправочника</CommandName>
+												<ExtendedTooltip name="ПартнерыПодборПартнеровРасширеннаяПодсказка" id="74"/>
+											</Button>
+											<Button name="ПартнерыПодборПартнеровИзСпискаТТ" id="75">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПодборПартнеровИзСпискаТТ</CommandName>
+												<ExtendedTooltip name="ПартнерыПодборПартнеровИзСпискаТТРасширеннаяПодсказка" id="76"/>
+											</Button>
+											<Button name="ПартнерыДобавитьВсехПартнеров" id="110">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьВсехПартнеров</CommandName>
+												<ExtendedTooltip name="ПартнерыДобавитьВсехПартнеровРасширеннаяПодсказка" id="111"/>
+											</Button>
+											<ButtonGroup name="ПартнерыГруппаМенюТолькоСПутсымиКоординатами" id="106">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Партнеры группа меню только с путсыми координатами</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Партнеры группа меню только с путсыми координатами</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ПартнерыГруппаМенюТолькоСПутсымиКоординатамиРасширеннаяПодсказка" id="107"/>
+												<ChildItems>
+													<Button name="ПартнерыПризнакТолькоСПустымиКоординатами" id="104">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ПризнакТолькоСПустымиКоординатами</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Только с пустыми координатами</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ПартнерыПризнакТолькоСПустымиКоординатамиРасширеннаяПодсказка" id="105"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+										</ChildItems>
+									</Popup>
+									<Button name="ПартнерыОпределитьКоординатыПоАдресу" id="89">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОпределитьКоординатыПоАдресу</CommandName>
+										<ExtendedTooltip name="ПартнерыОпределитьКоординатыПоАдресуРасширеннаяПодсказка" id="90"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПартнерыРасширеннаяПодсказка" id="25"/>
+							<SearchStringAddition name="ПартнерыСтрокаПоиска" id="26">
+								<AdditionSource>
+									<Item>Партнеры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПартнерыСтрокаПоискаКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ПартнерыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПартнерыСостояниеПросмотра" id="29">
+								<AdditionSource>
+									<Item>Партнеры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПартнерыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="ПартнерыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПартнерыУправлениеПоиском" id="32">
+								<AdditionSource>
+									<Item>Партнеры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПартнерыУправлениеПоискомКонтекстноеМеню" id="33"/>
+								<ExtendedTooltip name="ПартнерыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ПартнерыВыбор</Event>
+								<Event name="BeforeAddRow">ПартнерыПередНачаломДобавления</Event>
+								<Event name="OnActivateRow">ПартнерыПриАктивизацииСтроки</Event>
+								<Event name="AfterDeleteRow">ПартнерыПослеУдаления</Event>
+								<Event name="OnChange">ПартнерыПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ПартнерыГруппаНаименованиеАдрес" id="52">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партнеры группа наименование адрес</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партнеры группа наименование адрес</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПартнерыГруппаНаименованиеАдресРасширеннаяПодсказка" id="53"/>
+									<ChildItems>
+										<InputField name="ПартнерыПартнер" id="35">
+											<DataPath>Партнеры.Партнер</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Партнер (Клиент)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Партнер (клиент, торговая точка)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПартнерыПартнерКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ПартнерыПартнерРасширеннаяПодсказка" id="37"/>
+											<Events>
+												<Event name="OnChange">ПартнерыПартнерПриИзменении</Event>
+												<Event name="Opening">ПартнерыПартнерОткрытие</Event>
+											</Events>
+										</InputField>
+										<ColumnGroup name="ГруппаШиротаДолгота" id="54">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа широта долгота</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа широта долгота</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>2</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ГруппаШиротаДолготаРасширеннаяПодсказка" id="55"/>
+											<ChildItems>
+												<PictureField name="ПартнерыТочность" id="99">
+													<DataPath>Партнеры.Точность</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Точность определения координат</v8:content>
+														</v8:item>
+													</ToolTip>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>1</Width>
+													<ValuesPicture>
+														<xr:Abs>ValuesPicture.png</xr:Abs>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</ValuesPicture>
+													<ContextMenu name="ПартнерыТочностьКонтекстноеМеню" id="100"/>
+													<ExtendedTooltip name="ПартнерыТочностьРасширеннаяПодсказка" id="101"/>
+												</PictureField>
+												<InputField name="ПартнерыКоординаты" id="96">
+													<DataPath>Партнеры.Координаты</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Координаты местоположения партнера. Показываются жирным шрифтом, если координаты были изменены, но не записаны.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПартнерыКоординатыКонтекстноеМеню" id="97"/>
+													<ExtendedTooltip name="ПартнерыКоординатыРасширеннаяПодсказка" id="98"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПартнерыГруппаАдреса" id="94">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партнеры группа адреса</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Партнеры группа адреса</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПартнерыГруппаАдресаРасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<InputField name="ПартнерыАдрес" id="44">
+											<DataPath>Партнеры.Адрес</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес партнера в учетной системе</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПартнерыАдресКонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="ПартнерыАдресРасширеннаяПодсказка" id="46"/>
+										</InputField>
+										<InputField name="ПартнерыАдресКоординат" id="91">
+											<DataPath>Партнеры.АдресКоординат</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес из веб-сервиса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес по полученным координатам из сервиса определения координат</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<TextColor>web:MediumBlue</TextColor>
+											<ContextMenu name="ПартнерыАдресКоординатКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ПартнерыАдресКоординатРасширеннаяПодсказка" id="93"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраваяОбласть" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая область</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая область</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяОбластьРасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПанельКарта" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа панель карта</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа панель карта</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПанельКартаРасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<InputField name="ИсточникКарты" id="65">
+									<DataPath>ИсточникКарты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Карта</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Width>14</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<OpenButton>false</OpenButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ИсточникКартыКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ИсточникКартыРасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">ИсточникКартыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="РежимВыбораКоординат" id="134">
+									<DataPath>РежимВыбораКоординат</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Режим выбора координат на карте</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>CheckBox</CheckBoxType>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Выключено; БИ=Включено</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="РежимВыбораКоординатКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="РежимВыбораКоординатРасширеннаяПодсказка" id="136"/>
+									<Events>
+										<Event name="OnChange">РежимВыбораКоординатПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<PictureDecoration name="ДекорацияКартинка" id="117">
+									<Height>1</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияКартинкаКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ДекорацияКартинкаРасширеннаяПодсказка" id="119"/>
+								</PictureDecoration>
+								<CommandBar name="ГруппаПанельКомандКарты" id="120">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа панель команд карты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа панель команд карты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<ExtendedTooltip name="ГруппаПанельКомандКартыРасширеннаяПодсказка" id="121"/>
+									<ChildItems>
+										<Button name="КомандаУказатьЦентрКарты" id="124">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.УказатьЦентрКарты</CommandName>
+											<ExtendedTooltip name="КомандаУказатьЦентрКартыРасширеннаяПодсказка" id="125"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<HTMLDocumentField name="ПолеБраузера" id="58">
+							<DataPath>ТекстСкрипта</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="ПолеБраузераКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ПолеБраузераРасширеннаяПодсказка" id="60"/>
+							<Events>
+								<Event name="DocumentComplete">ПолеБраузераДокументСформирован</Event>
+								<Event name="OnClick">ПолеБраузераПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура дополнительных параметров модуля формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Партнеры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнеры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Партнер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Партнер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Широта" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Широта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Долгота" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долгота</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Адрес" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоординатыИзменены" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Координаты изменены</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АдресКоординат" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес координат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Координаты" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Широта; Долгота</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Точность" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Точность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстСкрипта" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст скрипта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникКарты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник карты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ИсточникКарты</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтррМаркер" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маркер</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТаймерОжидания" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер ожидания</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РежимВыбораКоординат" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим выбора координат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>РежимВыбораКоординат</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ТолькоСПустымиКоординатами" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбирать ТТ только с пустыми координатами</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТолькоСПустымиКоординатами</Field>
+			</Save>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПартнерыКоординаты</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Партнеры.КоординатыИзменены</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьСпискиТорговыхТочек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки торговых точек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать списки торговых точек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьГлавнуюФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на главную страницу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+M</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьПартнеров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнеры (клиенты)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список партнеров (клиентов)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодборПартнеровИзСправочника" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из справочника "Партнеры"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор партнеров из справочника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодборПартнеровИзСправочника</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодборПартнеровИзСпискаТТ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из списка торговых точек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор партнеров из списка ТТ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодборПартнеровИзСпискаТТ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сохранить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить все изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Action>КомандаСохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьПризнакИзмененияКоординат" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять признак изменения координат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять признак изменения координат у выделенных строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСнятьПризнакИзмененияКоординат</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьПризнакИзмененияКоординат" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить признак изменения координат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить признак изменения координат у выделенных строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУстановитьПризнакИзмененияКоординат</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОпределитьКоординатыПоАдресу" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определить координаты по адресу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определить координаты по адресу для выделенных партнеров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОпределитьКоординатыПоАдресу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПризнакТолькоСПустымиКоординатами" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак только с пустыми координатами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак только с пустыми координатами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПризнакТолькоСПустымиКоординатами</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СортироватьПоТочностиКоординат" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать по точности координат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировать по точности координат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСортироватьПоТочностиКоординат</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьВсехПартнеров" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить всех партнеров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить всех партнеров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДобавитьВсехПартнеров</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНазначитьКоординаты" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда назначить координаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда назначить координаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УказатьЦентрКарты" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указать центр карты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указать центр карты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУказатьЦентрКарты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Справка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+1</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Help</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

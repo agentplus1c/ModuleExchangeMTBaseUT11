@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мобильное устройство</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаОК" id="14">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<ExtendedTooltip name="ФормаКомандаОКРасширеннаяПодсказка" id="15"/>
+			</Button>
+			<Button name="ФормаОтмена" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="13"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Page name="Главная" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Главная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Главная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГлавнаяРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="Наименование" id="1">
+							<DataPath>Наименование</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование мобильного устройства</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">ЭлементПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Описание" id="4">
+							<DataPath>Описание</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание мобильного устройства</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ЭлементПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ИдентификаторМУПредставление" id="7">
+							<DataPath>ИдентификаторМУПредставление</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Уникальный идентификатор мобильного устройства, используемый в Службе обмена данными.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Mask>UUUUUUUU-UUUU-UUUU-UUUU-UUUUUUUUUUUU</Mask>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<ContextMenu name="ИдентификаторМУПредставлениеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИдентификаторМУПредставлениеРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">ЭлементПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Пользователь" id="16">
+							<DataPath>Пользователь</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Агент, закрепленный за мобильным устройством.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ClearButton>true</ClearButton>
+							<CreateButton>false</CreateButton>
+							<QuickChoice>false</QuickChoice>
+							<TextEdit>false</TextEdit>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ПользовательКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">ЭлементПриИзменении</Event>
+								<Event name="StartChoice">ПользовательНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДатаРегистрации" id="48">
+							<DataPath>ДатаРегистрации</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="ДатаРегистрацииКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ДатаРегистрацииРасширеннаяПодсказка" id="50"/>
+						</InputField>
+						<LabelField name="ЗагруженИзЛК" id="60">
+							<DataPath>ЗагруженИзЛК</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Мобильное устройство загружено из "Личного кабинета"</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="ЗагруженИзЛККонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="ЗагруженИзЛКРасширеннаяПодсказка" id="62"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ЛичныйКабинет" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Личный кабинет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Личный кабинет</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЛичныйКабинетРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<InputField name="ЛК_Name" id="21">
+							<DataPath>ЛК_Name</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Название</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="ЛК_NameКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ЛК_NameРасширеннаяПодсказка" id="23"/>
+						</InputField>
+						<UsualGroup name="ГруппаЛКМодельНомер" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКМодель номер</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКМодель номер</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛКМодельНомерРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<InputField name="ЛК_DeviceModel" id="63">
+									<DataPath>ЛК_DeviceModel</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ЛК_DeviceModelКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ЛК_DeviceModelРасширеннаяПодсказка" id="65"/>
+								</InputField>
+								<InputField name="ЛК_SerialNumber" id="24">
+									<DataPath>ЛК_SerialNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Серийный номер</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ЛК_SerialNumberКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ЛК_SerialNumberРасширеннаяПодсказка" id="26"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ЛК_Manufacturer" id="30">
+							<DataPath>ЛК_Manufacturer</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>Top</TitleLocation>
+							<ContextMenu name="ЛК_ManufacturerКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ЛК_ManufacturerРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<UsualGroup name="ГруппаЛКСотрудник" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКСотрудник</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ЛКСотрудник</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛКСотрудникРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<InputField name="ЛК_Employee" id="33">
+									<DataPath>ЛК_Employee</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сотрудник</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ЛК_EmployeeКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ЛК_EmployeeРасширеннаяПодсказка" id="35"/>
+								</InputField>
+								<InputField name="ЛК_LastActivityDate" id="70">
+									<DataPath>ЛК_LastActivityDate</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время активности</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Время последнего обращения МУ в "Личный кабинет". Обновляется после загрузки данных из "Личного кабинета".</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ЛК_LastActivityDateКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ЛК_LastActivityDateРасширеннаяПодсказка" id="72"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ЛК_IdentifierПредставление" id="57">
+							<DataPath>ЛК_IdentifierПредставление</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЛК_IdentifierПредставлениеКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ЛК_IdentifierПредставлениеРасширеннаяПодсказка" id="59"/>
+						</InputField>
+						<InputField name="ЛК_HardwareIdПредставление" id="54">
+							<DataPath>ЛК_HardwareIdПредставление</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЛК_HardwareIdПредставлениеКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ЛК_HardwareIdПредставлениеРасширеннаяПодсказка" id="56"/>
+						</InputField>
+						<InputField name="ЛК_MDMIdПредставление" id="51">
+							<DataPath>ЛК_MDMIdПредставление</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЛК_MDMIdПредставлениеКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ЛК_MDMIdПредставлениеРасширеннаяПодсказка" id="53"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаСведенияИзЛК" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения из "Личного кабинета"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сведения из ЛК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаСведенияИзЛКРасширеннаяПодсказка" id="20"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.FTPАдрес</Field>
+				<Field>Объект.FTPКаталогСервера</Field>
+				<Field>Объект.FTPПароль</Field>
+				<Field>Объект.FTPПассивныйРежим</Field>
+				<Field>Объект.FTPПользователь</Field>
+				<Field>Объект.АвтозапускОбменаДанными</Field>
+				<Field>Объект.ВерсияНастроек</Field>
+				<Field>Объект.ВидВыгрузки</Field>
+				<Field>Объект.ВременныеТаблицы</Field>
+				<Field>Объект.ВыбАгент</Field>
+				<Field>Объект.ВыбНастройкиАгента</Field>
+				<Field>Объект.ВыгружатьЗаказы</Field>
+				<Field>Объект.ВыгружатьИзображенияТоваров</Field>
+				<Field>Объект.ВыгружатьИсториюПродаж</Field>
+				<Field>Объект.ВыгружатьМаршруты</Field>
+				<Field>Объект.ВыгружатьСтартовыеНомера</Field>
+				<Field>Объект.ВыгружатьТоварыСНулевымОстатком</Field>
+				<Field>Объект.ВыгружатьТолькоПросроченныеДолги</Field>
+				<Field>Объект.ВыделятьЦветомПросроченныеДолги</Field>
+				<Field>Объект.ГлубинаИсторииПродаж</Field>
+				<Field>Объект.ЗапросыМобильныхУстройств</Field>
+				<Field>Объект.ИнтервалАвтообмена</Field>
+				<Field>Объект.ИнтервалВыгрузкиЗаказов</Field>
+				<Field>Объект.ИнтервалВыгрузкиМаршрутов</Field>
+				<Field>Объект.ИнтервалПросроченныхДолгов</Field>
+				<Field>Объект.ИспользоватьАвтообмен</Field>
+				<Field>Объект.ИспользоватьКонтрагентов</Field>
+				<Field>Объект.ИспользоватьНумерациюЦБД</Field>
+				<Field>Объект.ИспользоватьТорговыеТочки</Field>
+				<Field>Объект.ИспользоватьХарактеристики</Field>
+				<Field>Объект.КартаЦентр</Field>
+				<Field>Объект.КаталогДанных</Field>
+				<Field>Объект.КаталогОбмена</Field>
+				<Field>Объект.КатегорииДокументов</Field>
+				<Field>Объект.КоличествоИнтерваловИстории</Field>
+				<Field>Объект.ЛКЗапомнитьЛогинИПароль</Field>
+				<Field>Объект.ЛКИдентификаторКаналаОбмена</Field>
+				<Field>Объект.ЛКИдентификаторУС</Field>
+				<Field>Объект.ЛКЛогин</Field>
+				<Field>Объект.ЛКНазваниеУС</Field>
+				<Field>Объект.ЛКПароль</Field>
+				<Field>Объект.ЛКПодтверждение</Field>
+				<Field>Объект.ЛКТокенУС</Field>
+				<Field>Объект.НастройкиАгентов</Field>
+				<Field>Объект.ОбновлятьДокументыПриЗагрузке</Field>
+				<Field>Объект.ОтветнаяВыгрузка</Field>
+				<Field>Объект.ОчищатьДокументыПередЗагрузкой</Field>
+				<Field>Объект.ОчищатьСправочникиПередЗагрузкой</Field>
+				<Field>Объект.ПериодХраненияЛогов</Field>
+				<Field>Объект.ПодтвержденияТолькоДляПроведенных</Field>
+				<Field>Объект.ПроводитьДокументыПриЗагрузке</Field>
+				<Field>Объект.РежимЗагрузкиЗаказов</Field>
+				<Field>Объект.СОДАдрес</Field>
+				<Field>Объект.СОДПорт</Field>
+				<Field>Объект.СОДПутьКПанелиУправления</Field>
+				<Field>Объект.СпискиТорговыхТочек</Field>
+				<Field>Объект.СписокОчищаемыхДокументов</Field>
+				<Field>Объект.СписокОчищаемыхСправочников</Field>
+				<Field>Объект.СпособОбмена</Field>
+				<Field>Объект.СтатусыПартнеров</Field>
+				<Field>Объект.ТабСтартовыеНомера</Field>
+				<Field>Объект.УчитыватьРезервы</Field>
+				<Field>Объект.ЦветПросроченныхДолгов</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.МобильныеУстройства">
+					<Column name="Пользователь" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Агент</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Наименование" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>64</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИдентификаторМУ" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Идентификатор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Описание" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Описание</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>128</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ID" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Внутренний уникальный идентификатор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СтатусНастроек" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Статус настроек</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ДатаРегистрации" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дата регистрации МУ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</Type>
+					</Column>
+					<Column name="ЗагруженИзЛК" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Загружен из ЛК</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ЛК_Identifier" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Идентификатор в ЛК</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ЛК_HardwareId" id="10">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Hardware ID</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ЛК_SerialNumber" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сериный номер</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>50</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ЛК_Manufacturer" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Производитель</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>30</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ЛК_Name" id="13">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ЛК_Alias" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Псевдоним</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ЛК_MDMId" id="15">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Л к MDMId</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИдентификаторМУПредставление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор мобильного устройства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтррРеквизиты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты МУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура дополнительных параметров модуля формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Пользователь" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Описание" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>128</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Наименование" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>64</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ID" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторМУ" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор мобильного устройства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаРегистрации" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагруженИзЛК" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружено из ЛК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_Identifier" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Л к identifier</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_HardwareId" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Hardware ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_SerialNumber" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Л к serial number</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_Manufacturer" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_Name" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Л к name</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_Employee" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_MDMId" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Л к MDMId</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_MDMIdПредставление" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MDM ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_HardwareIdПредставление" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Hardware ID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_IdentifierПредставление" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор в ЛК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_DeviceModel" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛК_LastActivityDate" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Последнее время активности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

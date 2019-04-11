@@ -1,0 +1,1437 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНоменклатуры</dataPath>
+			<field>АналитикаУчетаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаНаборов</dataPath>
+			<field>АналитикаУчетаНаборов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидЗапасов</dataPath>
+			<field>ВидЗапасов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПоПартнерам</dataPath>
+			<field>АналитикаУчетаПоПартнерам</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаУчетаПартий</dataPath>
+			<field>АналитикаУчетаПартий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партнер</dataPath>
+			<field>Партнер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партнер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АналитикаФинансовогоУчета</dataPath>
+			<field>АналитикаФинансовогоУчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Партия</dataPath>
+			<field>Партия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазделУчета</dataPath>
+			<field>РазделУчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗапасов</dataPath>
+			<field>ТипЗапасов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДеятельностиНДС</dataPath>
+			<field>ВидДеятельностиНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодОкончание</dataPath>
+			<field>ПериодОкончание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период окончание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельностиКонтрагента</dataPath>
+			<field>НаправлениеДеятельностиКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Соглашение</dataPath>
+			<field>Соглашение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХозяйственнаяОперация</dataPath>
+			<field>ХозяйственнаяОперация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланПродаж</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельностиНоменклатуры</dataPath>
+			<field>НаправлениеДеятельностиНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаименованиеПлана</dataPath>
+			<field>НаименованиеПлана</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование плана</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Агент</dataPath>
+			<field>Агент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Агент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланПродажНачало</dataPath>
+			<field>ПланПродажНачало</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План продаж начало</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапланированноеКоличество</dataPath>
+			<field>Количество</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=0</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланПродажОкончание</dataPath>
+			<field>ПланПродажОкончание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План продаж окончание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланированиеПоСумме</dataPath>
+			<field>ПланированиеПоСумме</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планирование по сумме</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодНачало</dataPath>
+			<field>ПериодНачало</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период начало</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаФактПоПродажамВалютпРегУчета</dataPath>
+			<field>СуммаФактПоПродажамВалютпРегУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма факт по продажам валютп рег учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗапланированнаяСумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаФактПоПродажам</dataPath>
+			<field>СуммаФактПоПродажам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма факт по продажам</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактПоПродажам</dataPath>
+			<field>ФактПоПродажам</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт по продажам</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактПоДокументамИзМУ</dataPath>
+			<field>ФактПоДокументамИзМУ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факт по документам из МУ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПланПродаж.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ_ПланПродаж
+ИЗ
+	Документ.ПланПродаж КАК ПланПродаж
+ГДЕ
+	ПланПродаж.ВидПлана.ТипПлана = ЗНАЧЕНИЕ(Перечисление.ТипыПланов.ПланПродаж)
+	И ПланПродаж.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыПланов.Утвержден)
+	И ПланПродаж.Проведен
+{ГДЕ
+	(ПланПродаж.НачалоПериода &lt;= &amp;ПараметрДатаКонец),
+	(ПланПродаж.ОкончаниеПериода &gt; &amp;ПараметрДатаНачало),
+	(ПланПродаж.Ответственный В (&amp;ПараметрАгент)),
+	(ПланПродаж.Ссылка В (&amp;ПараметрПланПродаж))}
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПланПродаж.Ссылка КАК Ссылка,
+	ПланПродаж.Номер КАК Номер,
+	ПланПродаж.Сценарий.Наименование КАК НаименованиеПлана,
+	ПланПродаж.НачалоПериода КАК НачалоПериода,
+	ПланПродаж.ОкончаниеПериода КАК ОкончаниеПериода,
+	СценарииТоварногоПланирования.ПланПродажПланироватьПоСумме КАК ПланированиеПоСумме,
+	СценарииТоварногоПланирования.Периодичность КАК Периодичность,
+	ВЫБОР
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, ДЕНЬ, -1)
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Неделя)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, НЕДЕЛЯ, -1)
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Декада)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, ДЕКАДА, -1)
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, МЕСЯЦ, -1)
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Квартал)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, КВАРТАЛ, -1)
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Полугодие)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, ПОЛУГОДИЕ, -1)
+		КОГДА СценарииТоварногоПланирования.Периодичность = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+			ТОГДА ДОБАВИТЬКДАТЕ(ПланПродажТовары.ДатаОтгрузки, ГОД, -1)
+		ИНАЧЕ ПланПродажТовары.ДатаОтгрузки
+	КОНЕЦ КАК ДатаОтгрузкиНачало,
+	ПланПродажТовары.ДатаОтгрузки КАК ДатаОтгрузки,
+	ПланПродаж.Валюта КАК Валюта,
+	ВЫБОР
+		КОГДА ПланПродаж.ВидПлана.ЗаполнятьПартнераВТЧ
+			ТОГДА ПланПродажТовары.Партнер
+		ИНАЧЕ ПланПродаж.Партнер
+	КОНЕЦ КАК Партнер,
+	ПланПродажТовары.Номенклатура КАК Номенклатура,
+	ПланПродажТовары.Количество КАК Количество,
+	ПланПродажТовары.Сумма КАК Сумма,
+	ПланПродаж.Ответственный КАК Агент
+ПОМЕСТИТЬ ВТ_ПланПродажБезФакта
+ИЗ
+	Документ.ПланПродаж.Товары КАК ПланПродажТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ПланПродаж КАК ВТ_ПланПродаж
+		ПО ПланПродажТовары.Ссылка = ВТ_ПланПродаж.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПланПродаж КАК ПланПродаж
+		ПО ПланПродажТовары.Ссылка = ПланПродаж.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.СценарииТоварногоПланирования КАК СценарииТоварногоПланирования
+		ПО (СценарииТоварногоПланирования.Ссылка = ПланПродаж.Сценарий)
+ГДЕ
+	ПланПродажТовары.Отменено = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МИНИМУМ(ВТ_ПланПродажБезФакта.НачалоПериода) КАК НачалоПериода,
+	МАКСИМУМ(ВТ_ПланПродажБезФакта.ОкончаниеПериода) КАК ОкончаниеПериода,
+	ВТ_ПланПродажБезФакта.Агент КАК Агент,
+	ВТ_ПланПродажБезФакта.Партнер КАК Партнер
+ПОМЕСТИТЬ ВТ_ОтборАгент
+ИЗ
+	ВТ_ПланПродажБезФакта КАК ВТ_ПланПродажБезФакта
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПланПродажБезФакта.Агент,
+	ВТ_ПланПродажБезФакта.Партнер
+
+ИНДЕКСИРОВАТЬ ПО
+	Агент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДокументЗаказ.Ссылка КАК Ссылка,
+	ДокументЗаказ.Дата КАК Дата,
+	ДокументЗаказ.Партнер КАК Партнер,
+	ДокументЗаказ.Менеджер КАК Агент
+ПОМЕСТИТЬ ВТ_Заказы
+ИЗ
+	Документ.ЗаказКлиента КАК ДокументЗаказ
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ОтборАгент КАК ВТ_ОтборАгент
+		ПО ДокументЗаказ.Менеджер = ВТ_ОтборАгент.Агент
+ГДЕ
+	ДокументЗаказ.Дата МЕЖДУ ВТ_ОтборАгент.НачалоПериода И ВТ_ОтборАгент.ОкончаниеПериода
+	И ДокументЗаказ.ПометкаУдаления = ЛОЖЬ
+	И ВЫБОР
+			КОГДА ВТ_ОтборАгент.Партнер = ЗНАЧЕНИЕ(Справочник.Партнеры.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументЗаказ.Партнер = ВТ_ОтборАгент.Партнер
+		КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ДокументРеализация.Ссылка КАК Ссылка,
+	ДокументРеализация.Дата КАК Дата,
+	ДокументРеализация.Партнер КАК Партнер,
+	ДокументРеализация.Менеджер КАК Агент,
+	ДокументРеализация.РеализацияПоЗаказам КАК РеализацияПоЗаказам,
+	ДокументРеализация.ЗаказКлиента КАК ЗаказКлиента
+ПОМЕСТИТЬ ВТ_Реализации
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК ДокументРеализация
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ОтборАгент КАК ВТ_ОтборАгент
+		ПО ДокументРеализация.Менеджер = ВТ_ОтборАгент.Агент
+ГДЕ
+	ДокументРеализация.Дата МЕЖДУ ВТ_ОтборАгент.НачалоПериода И ВТ_ОтборАгент.ОкончаниеПериода
+	И ДокументРеализация.ПометкаУдаления = ЛОЖЬ
+	И ВЫБОР
+			КОГДА ВТ_ОтборАгент.Партнер = ЗНАЧЕНИЕ(Справочник.Партнеры.ПустаяСсылка)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ДокументРеализация.Партнер = ВТ_ОтборАгент.Партнер
+		КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Заказы.Ссылка КАК Ссылка,
+	ВТ_Заказы.Дата КАК Дата
+ПОМЕСТИТЬ ВТ_ОтборДокументы
+ИЗ
+	ВТ_Заказы КАК ВТ_Заказы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Реализации.Ссылка,
+	ВТ_Реализации.Дата
+ИЗ
+	ВТ_Реализации КАК ВТ_Реализации
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПланПродажБезФакта.Номенклатура КАК Ссылка
+ПОМЕСТИТЬ ВТ_Номенклатура
+ИЗ
+	ВТ_ПланПродажБезФакта КАК ВТ_ПланПродажБезФакта
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПланПродажБезФакта.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаУчетаНоменклатуры.КлючАналитики КАК КлючАналитики,
+	АналитикаУчетаНоменклатуры.Номенклатура КАК Номенклатура
+ПОМЕСТИТЬ ВТ_КлючАналитикиИНоменклатура
+ИЗ
+	ВТ_Номенклатура КАК ВТ_Номенклатура
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.АналитикаУчетаНоменклатуры КАК АналитикаУчетаНоменклатуры
+		ПО ВТ_Номенклатура.Ссылка = АналитикаУчетаНоменклатуры.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	КлючАналитики
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	АналитикаУчетаПоПартнерам.КлючАналитики КАК КлючАналитики,
+	АналитикаУчетаПоПартнерам.Партнер КАК Партнер
+ПОМЕСТИТЬ ВТ_КлючАналитикиУчетаПоПартнерам
+ИЗ
+	РегистрСведений.АналитикаУчетаПоПартнерам КАК АналитикаУчетаПоПартнерам
+
+ИНДЕКСИРОВАТЬ ПО
+	КлючАналитики
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_КлючАналитикиИНоменклатура.Номенклатура КАК Номенклатура,
+	ВТ_КлючАналитикиУчетаПоПартнерам.Партнер КАК Партнер,
+	ВыручкаИСебестоимостьПродажОбороты.Менеджер КАК Агент,
+	ВТ_ОтборДокументы.Дата КАК ДатаЗаказКлиента,
+	ВыручкаИСебестоимостьПродажОбороты.КоличествоОборот КАК КоличествоФакт,
+	ВыручкаИСебестоимостьПродажОбороты.СуммаВыручкиОборот КАК СуммаФакт,
+	ВыручкаИСебестоимостьПродажОбороты.СуммаВыручкиРеглОборот КАК СуммаФактВВалютеРегУчета
+ПОМЕСТИТЬ ВТ_ВыручкаИСебестоимостьПродаж
+ИЗ
+	РегистрНакопления.ВыручкаИСебестоимостьПродаж.Обороты(
+			,
+			,
+			Регистратор,
+			АналитикаУчетаНоменклатуры В
+					(ВЫБРАТЬ
+						ВТ_КлючАналитикиИНоменклатура.КлючАналитики
+					ИЗ
+						ВТ_КлючАналитикиИНоменклатура КАК ВТ_КлючАналитикиИНоменклатура)
+				И ЗаказКлиента В
+					(ВЫБРАТЬ
+						ВТ_ОтборДокументы.Ссылка
+					ИЗ
+						ВТ_ОтборДокументы КАК ВТ_ОтборДокументы)) КАК ВыручкаИСебестоимостьПродажОбороты
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_КлючАналитикиИНоменклатура КАК ВТ_КлючАналитикиИНоменклатура
+		ПО ВыручкаИСебестоимостьПродажОбороты.АналитикаУчетаНоменклатуры = ВТ_КлючАналитикиИНоменклатура.КлючАналитики
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_КлючАналитикиУчетаПоПартнерам КАК ВТ_КлючАналитикиУчетаПоПартнерам
+		ПО ВыручкаИСебестоимостьПродажОбороты.АналитикаУчетаПоПартнерам = ВТ_КлючАналитикиУчетаПоПартнерам.КлючАналитики
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ОтборДокументы КАК ВТ_ОтборДокументы
+		ПО ВыручкаИСебестоимостьПродажОбороты.ЗаказКлиента = ВТ_ОтборДокументы.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Партнер,
+	Агент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Реализации.Ссылка КАК Ссылка,
+	РеализацияТоваров.Номенклатура КАК Номенклатура,
+	РеализацияТоваров.Количество КАК Количество,
+	РеализацияТоваров.ЗаказКлиента КАК ЗаказКлиентаТЧ,
+	ВТ_Реализации.РеализацияПоЗаказам КАК РеализацияПоЗаказам,
+	ВТ_Реализации.ЗаказКлиента КАК ЗаказКлиента
+ПОМЕСТИТЬ ВТ_ДокументыМУРеализацииВсе
+ИЗ
+	Документ.РеализацияТоваровУслуг.Товары КАК РеализацияТоваров
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Реализации КАК ВТ_Реализации
+		ПО РеализацияТоваров.Ссылка = ВТ_Реализации.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ДокументыМУРеализацииВсе.Ссылка КАК Ссылка,
+	ВТ_ДокументыМУРеализацииВсе.Номенклатура КАК Номенклатура,
+	ВТ_ДокументыМУРеализацииВсе.Количество КАК Количество,
+	ВТ_ДокументыМУРеализацииВсе.ЗаказКлиента КАК ЗаказКлиента,
+	ВТ_ДокументыМУРеализацииВсе.ЗаказКлиентаТЧ КАК ЗаказКлиентаТЧ
+ПОМЕСТИТЬ ВТ_ДокументыМУРеализацииПоЗаказам
+ИЗ
+	ВТ_ДокументыМУРеализацииВсе КАК ВТ_ДокументыМУРеализацииВсе
+ГДЕ
+	ВТ_ДокументыМУРеализацииВсе.РеализацияПоЗаказам = ИСТИНА
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	ЗаказКлиента,
+	ЗаказКлиентаТЧ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Заказы.Партнер КАК Партнер,
+	ВТ_Заказы.Агент КАК Агент,
+	ВТ_Заказы.Дата КАК ДатаЗаказа,
+	ЗаказыТовары.Номенклатура КАК Номенклатура,
+	ЗаказыТовары.Количество КАК Количество
+ПОМЕСТИТЬ ВТ_ДокументыМУ
+ИЗ
+	Документ.ЗаказКлиента.Товары КАК ЗаказыТовары
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Заказы КАК ВТ_Заказы
+		ПО ЗаказыТовары.Ссылка = ВТ_Заказы.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Заказы.Партнер,
+	ВТ_Реализации.Агент,
+	ВТ_Реализации.Дата,
+	ВТ_ДокументыМУРеализацииПоЗаказам.Номенклатура,
+	ВТ_ДокументыМУРеализацииПоЗаказам.Количество
+ИЗ
+	ВТ_ДокументыМУРеализацииПоЗаказам КАК ВТ_ДокументыМУРеализацииПоЗаказам
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Заказы КАК ВТ_Заказы
+		ПО ВТ_ДокументыМУРеализацииПоЗаказам.ЗаказКлиента &lt;&gt; ВТ_Заказы.Ссылка
+			И ВТ_ДокументыМУРеализацииПоЗаказам.ЗаказКлиентаТЧ &lt;&gt; ВТ_Заказы.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Реализации КАК ВТ_Реализации
+		ПО ВТ_ДокументыМУРеализацииПоЗаказам.Ссылка = ВТ_Реализации.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Реализации.Партнер,
+	ВТ_Реализации.Агент,
+	ВТ_Реализации.Дата,
+	ВТ_ДокументыМУРеализацииВсе.Номенклатура,
+	ВТ_ДокументыМУРеализацииВсе.Количество
+ИЗ
+	ВТ_ДокументыМУРеализацииВсе КАК ВТ_ДокументыМУРеализацииВсе
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Реализации КАК ВТ_Реализации
+		ПО ВТ_ДокументыМУРеализацииВсе.Ссылка = ВТ_Реализации.Ссылка
+ГДЕ
+	ВТ_ДокументыМУРеализацииВсе.РеализацияПоЗаказам = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	Номенклатура,
+	Партнер,
+	Агент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПланПродажБезФакта.Ссылка КАК Ссылка,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало КАК ДатаОтгрузкиНачало,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузки КАК ДатаОтгрузки,
+	ВТ_ПланПродажБезФакта.Партнер КАК Партнер,
+	ВТ_ПланПродажБезФакта.Агент КАК Агент,
+	ВТ_ПланПродажБезФакта.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(СУММА(ВТ_ВыручкаИСебестоимостьПродаж.КоличествоФакт), 0) КАК КоличествоФакт,
+	ЕСТЬNULL(СУММА(ВТ_ВыручкаИСебестоимостьПродаж.СуммаФакт), 0) КАК СуммаФакт,
+	ЕСТЬNULL(СУММА(ВТ_ВыручкаИСебестоимостьПродаж.СуммаФактВВалютеРегУчета), 0) КАК СуммаФактВВалютеРегУчета
+ПОМЕСТИТЬ ВТ_ВыполнениеВыручкаИСебестоимостьПродаж
+ИЗ
+	ВТ_ПланПродажБезФакта КАК ВТ_ПланПродажБезФакта
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ВыручкаИСебестоимостьПродаж КАК ВТ_ВыручкаИСебестоимостьПродаж
+		ПО ВТ_ПланПродажБезФакта.Номенклатура = ВТ_ВыручкаИСебестоимостьПродаж.Номенклатура
+			И (ВТ_ПланПродажБезФакта.Партнер = ВТ_ВыручкаИСебестоимостьПродаж.Партнер
+				ИЛИ ВТ_ПланПродажБезФакта.Партнер = ЗНАЧЕНИЕ(Справочник.Партнеры.Пустаяссылка))
+			И ВТ_ПланПродажБезФакта.Агент = ВТ_ВыручкаИСебестоимостьПродаж.Агент
+ГДЕ
+	ВТ_ВыручкаИСебестоимостьПродаж.ДатаЗаказКлиента МЕЖДУ ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало И ВТ_ПланПродажБезФакта.ДатаОтгрузки
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПланПродажБезФакта.Ссылка,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузки,
+	ВТ_ПланПродажБезФакта.Партнер,
+	ВТ_ПланПродажБезФакта.Агент,
+	ВТ_ПланПродажБезФакта.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	ДатаОтгрузкиНачало,
+	ДатаОтгрузки,
+	Партнер,
+	Агент,
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПланПродажБезФакта.Ссылка КАК Ссылка,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало КАК ДатаОтгрузкиНачало,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузки КАК ДатаОтгрузки,
+	ВТ_ПланПродажБезФакта.Партнер КАК Партнер,
+	ВТ_ПланПродажБезФакта.Агент КАК Агент,
+	ВТ_ПланПродажБезФакта.Номенклатура КАК Номенклатура,
+	ЕСТЬNULL(СУММА(ВТ_ДокументыМУ.Количество), 0) КАК КоличествоФактМУ
+ПОМЕСТИТЬ ВТ_ВыполнениеДокументыМУ
+ИЗ
+	ВТ_ПланПродажБезФакта КАК ВТ_ПланПродажБезФакта
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ДокументыМУ КАК ВТ_ДокументыМУ
+		ПО ВТ_ПланПродажБезФакта.Номенклатура = ВТ_ДокументыМУ.Номенклатура
+			И (ВТ_ПланПродажБезФакта.Партнер = ВТ_ДокументыМУ.Партнер
+				ИЛИ ВТ_ПланПродажБезФакта.Партнер = ЗНАЧЕНИЕ(Справочник.Партнеры.Пустаяссылка))
+			И ВТ_ПланПродажБезФакта.Агент = ВТ_ДокументыМУ.Агент
+ГДЕ
+	ВТ_ДокументыМУ.ДатаЗаказа МЕЖДУ ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало И ВТ_ПланПродажБезФакта.ДатаОтгрузки
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ПланПродажБезФакта.Ссылка,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузки,
+	ВТ_ПланПродажБезФакта.Партнер,
+	ВТ_ПланПродажБезФакта.Агент,
+	ВТ_ПланПродажБезФакта.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	ДатаОтгрузкиНачало,
+	ДатаОтгрузки,
+	Партнер,
+	Агент,
+	Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ПланПродажБезФакта.Ссылка КАК Ссылка,
+	ВТ_ПланПродажБезФакта.Номер КАК Номер,
+	ВТ_ПланПродажБезФакта.НаименованиеПлана КАК НаименованиеПлана,
+	ВТ_ПланПродажБезФакта.НачалоПериода КАК ПланПродажНачало,
+	ВТ_ПланПродажБезФакта.ОкончаниеПериода КАК ПланПродажОкончание,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало КАК ПериодНачало,
+	ВТ_ПланПродажБезФакта.ДатаОтгрузки КАК ПериодОкончание,
+	ВТ_ПланПродажБезФакта.ПланированиеПоСумме КАК ПланированиеПоСумме,
+	ВТ_ПланПродажБезФакта.Валюта КАК Валюта,
+	ВТ_ПланПродажБезФакта.Партнер КАК Партнер,
+	ВТ_ПланПродажБезФакта.Номенклатура КАК Номенклатура,
+	естьNULL(ВТ_ПланПродажБезФакта.Количество, 0) КАК Количество,
+	естьNULL(ВТ_ПланПродажБезФакта.Сумма, 0) КАК Сумма,
+	ВТ_ПланПродажБезФакта.Агент КАК Агент,
+	естьNULL(ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.КоличествоФакт, 0) КАК ФактПоПродажам,
+	естьNULL(ВТ_ВыполнениеДокументыМУ.КоличествоФактМУ, 0) КАК ФактПоДокументамИзМУ,
+	естьNULL(ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.СуммаФакт, 0) КАК СуммаФактПоПродажам,
+	естьNULL(ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.СуммаФактВВалютеРегУчета, 0) КАК СуммаФактПоПродажамВалютпРегУчета
+	ИЗ
+	ВТ_ПланПродажБезФакта КАК ВТ_ПланПродажБезФакта
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ВыполнениеВыручкаИСебестоимостьПродаж КАК ВТ_ВыполнениеВыручкаИСебестоимостьПродаж
+		ПО ВТ_ПланПродажБезФакта.Ссылка = ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.Ссылка
+			И ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало = ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.ДатаОтгрузкиНачало
+			И ВТ_ПланПродажБезФакта.ДатаОтгрузки = ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.ДатаОтгрузки
+			И ВТ_ПланПродажБезФакта.Партнер = ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.Партнер
+			И ВТ_ПланПродажБезФакта.Агент = ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.Агент
+			И ВТ_ПланПродажБезФакта.Номенклатура = ВТ_ВыполнениеВыручкаИСебестоимостьПродаж.Номенклатура
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ВыполнениеДокументыМУ КАК ВТ_ВыполнениеДокументыМУ
+		ПО ВТ_ПланПродажБезФакта.Ссылка = ВТ_ВыполнениеДокументыМУ.Ссылка
+			И ВТ_ПланПродажБезФакта.ДатаОтгрузкиНачало = ВТ_ВыполнениеДокументыМУ.ДатаОтгрузкиНачало
+			И ВТ_ПланПродажБезФакта.ДатаОтгрузки = ВТ_ВыполнениеДокументыМУ.ДатаОтгрузки
+			И ВТ_ПланПродажБезФакта.Партнер = ВТ_ВыполнениеДокументыМУ.Партнер
+			И ВТ_ПланПродажБезФакта.Агент = ВТ_ВыполнениеДокументыМУ.Агент
+			И ВТ_ПланПродажБезФакта.Номенклатура = ВТ_ВыполнениеДокументыМУ.Номенклатура</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ПланПродажПериод</dataPath>
+		<expression>"План продаж " + Строка(Номер) + " с " +  Строка(Формат(ПериодНачало, "ДЛФ=Д"))+" по "+Строка(Формат(ПериодОкончание, "ДЛФ=Д"))</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>План продаж период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ВыполнениеФактическиеПродажи</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выполнение фактические продажи</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ВыполнениеПоДокументамПродажи</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выполнение по документам продажи</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ВыполнениеСуммаФактическиеПродажи</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выполнение сумма фактические продажи</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ВыполнениеСуммаФактическиеПродажиРегУчета</dataPath>
+		<expression/>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выполнение сумма фактические продажи рег учета</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ЧДЦ=2</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>ЗапланированнаяСумма</dataPath>
+		<expression>Сумма(ЗапланированнаяСумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаФактПоПродажам</dataPath>
+		<expression>Сумма(СуммаФактПоПродажам)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаФактПоПродажамВалютпРегУчета</dataPath>
+		<expression>Сумма(СуммаФактПоПродажамВалютпРегУчета)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактПоДокументамИзМУ</dataPath>
+		<expression>Сумма(ФактПоДокументамИзМУ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ФактПоПродажам</dataPath>
+		<expression>Сумма(ФактПоПродажам)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗапланированноеКоличество</dataPath>
+		<expression>Сумма(ЗапланированноеКоличество)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыполнениеФактическиеПродажи</dataPath>
+		<expression>ВЫБОР КОГДА  Сумма(ЗапланированноеКоличество) = 0 ТОГДА 0 ИНАЧЕ  ( (Сумма(ФактПоПродажам) * 100)/ Сумма(ЗапланированноеКоличество)) КОНЕЦ </expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыполнениеПоДокументамПродажи</dataPath>
+		<expression>ВЫБОР КОГДА  Сумма(ЗапланированноеКоличество) = 0 ТОГДА 0 ИНАЧЕ  ( (Сумма(ФактПоДокументамИзМУ) * 100)/ Сумма(ЗапланированноеКоличество)) КОНЕЦ </expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыполнениеСуммаФактическиеПродажи</dataPath>
+		<expression>ВЫБОР КОГДА  Сумма(ЗапланированнаяСумма) = 0 ТОГДА 0 ИНАЧЕ  ( (Сумма(СуммаФактПоПродажам) * 100)/ Сумма(ЗапланированнаяСумма)) КОНЕЦ </expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВыполнениеСуммаФактическиеПродажиРегУчета</dataPath>
+		<expression>ВЫБОР КОГДА  Сумма(ЗапланированнаяСумма) = 0 ТОГДА 0 ИНАЧЕ  ( (Сумма(СуммаФактПоПродажамВалютпРегУчета) * 100)/ Сумма(ЗапланированнаяСумма)) КОНЕЦ </expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПараметрАгент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Параметр агент</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПараметрПланПродаж</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Параметр план продаж</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПараметрДатаНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Параметр дата начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПараметрДатаКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Параметр дата конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПараметрПланПродаж</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ReportHeaderBackColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:DarkGray</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеПоДокументамПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажиРегУчета</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ВыполнениеПоДокументамПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажиРегУчета</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ВыполнениеФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ФактПоПродажам</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ФактПоДокументамИзМУ</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаФактПоПродажам</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаФактПоПродажамВалютпРегУчета</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗапланированнаяСумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЗапланированноеКоличество</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ФактПоПродажам</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ВыполнениеФактическиеПродажи</dcsset:left>
+							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#009646</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеПоДокументамПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ФактПоДокументамИзМУ</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ВыполнениеПоДокументамПродажи</dcsset:left>
+							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#009646</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажиРегУчета</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СуммаФактПоПродажам</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СуммаФактПоПродажамВалютпРегУчета</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ВыполнениеСуммаФактическиеПродажиРегУчета</dcsset:left>
+							<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">100</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#009646</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ФактПоПродажам</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ВыполнениеФактическиеПродажи</dcsset:left>
+								<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">25</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ЗапланированноеКоличество</dcsset:left>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеПоДокументамПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ФактПоДокументамИзМУ</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ВыполнениеПоДокументамПродажи</dcsset:left>
+								<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">25</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ЗапланированноеКоличество</dcsset:left>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажи</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВыполнениеСуммаФактическиеПродажиРегУчета</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СуммаФактПоПродажам</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СуммаФактПоПродажамВалютпРегУчета</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ВыполнениеСуммаФактическиеПродажиРегУчета</dcsset:left>
+								<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">25</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:left xsi:type="dcscor:Field">ЗапланированнаяСумма</dcsset:left>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0; ЧН=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInFieldsHeader>DontUse</dcsset:useInFieldsHeader>
+					<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.ОтображатьТаблицуДанных</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" kind="AutoFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FormBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.ЦветСоединенияЗначенийПоСериям</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Ivory</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.ШкалаТочек</dcscor:parameter>
+						<dcscor:value xmlns:d7p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d7p1:ChartScale">
+							<d7p1:titleTextSource>UseText</d7p1:titleTextSource>
+							<d7p1:titleArea>
+								<d7p1:font kind="AutoFont"/>
+								<d7p1:textColor>auto</d7p1:textColor>
+								<d7p1:backColor>auto</d7p1:backColor>
+								<d7p1:border width="1">
+									<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+								</d7p1:border>
+								<d7p1:borderColor>auto</d7p1:borderColor>
+							</d7p1:titleArea>
+							<d7p1:labelOrientation>Horizontal</d7p1:labelOrientation>
+							<d7p1:labelAngle>120</d7p1:labelAngle>
+						</dcscor:value>
+					</dcscor:item>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

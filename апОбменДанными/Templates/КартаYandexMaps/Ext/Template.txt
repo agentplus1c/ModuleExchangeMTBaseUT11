@@ -1,0 +1,408 @@
+﻿<!--
+Пример использования сервиса Яндекс.Карты.
+Условия использования сервиса:
+- http://legal.yandex.ru/maps_termsofuse/
+- http://legal.yandex.ru/maps_api/
+
+Версия скрипта 2.0 от 23.10.15
+Версия скрипта 2.1 от 13.11.18 //vd_181113 Добавлена константа initializeOK и если карта не загружена не выдает ошибку. 
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	
+	<title> Yandex maps API </title>
+
+	<style>
+		html,body {
+			padding:0px;
+			margin:0px;
+			height:100%;
+			overflow:hidden;
+		}
+	</style>
+
+    <!--
+        Подключаем API карт 2.x
+        Параметры:
+          - lang=ru-RU - язык русский.
+    --> 
+       
+    <script src="http://yandex.st/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+   
+    <script type="text/javascript">
+        
+        // Как только будет загружен API и готов DOM, выполняем инициализацию
+        
+		var myMap, myCollection;
+		var panelIsVisible = false;
+		var map_for_1c81;
+		
+		
+		//{{vd_181113
+		//Для того что бы исключить ошибки загрузки скрипта , бесконечно с интервалом в одну секунду проверяется загрузка скрипта
+		//Было: //ymaps.ready(initialize);    //лучше чем window.onload, т.к. происходит только после того как map yandex загрузится 
+
+		var initializeOK = false;  // Скрипт загружен и готов к работе
+		var onloadOK     = false;  // Сработал onload. Если initializeOK = false то скрипт больше не загрузится, нужно перегружать страничку.
+				
+		window.onload = function()
+		{
+			if(this.ymaps !== undefined) {
+				this.ymaps.ready(initialize);
+			} 
+			onloadOK = true; 			
+		}
+		   		
+		
+		// Пример с таймером.
+		//var initializeOK = false;  // Скрипт загружен и готов к работе
+			
+		//var initializeMap = false; // тех переменная. Используется для работы скрипта
+		//var i = 0;                 // тех переменная. Используется для работы скрипта
+		//var intervalId;            // тех переменная. Используется для работы скрипта
+				
+		//window.onload = function()
+		//{
+		//	intervalId = setInterval(myFunc, 1000);
+		//}
+		
+		
+		//function myFunc()
+		//{
+			//i++;
+
+			//if(this.ymaps !== undefined && initializeMap != true) 
+			//{
+			//	initializeMap = true;
+			//	this.ymaps.ready(initialize);
+			//	this.clearInterval(intervalId);
+			//}
+			
+			//if(i === 20)
+			//{
+			//	this.clearInterval(this.intervalId);
+			//}
+		//}
+		
+	
+		//}}vd_181113
+		
+		function initialize () {
+		
+		    map_for_1c81 = false;
+		    //получим координаты центра карты						
+			var MapCenter = [55.76, 37.64]; // Москва
+			
+			var arCenter = GetName().split("@");
+			if (arCenter.length == 3 && arCenter[0] != 0 ) {
+				MapCenter = [arCenter[0], arCenter[1]];
+				SetName(arCenter[2]);				
+			} 
+				
+			myMap = new ymaps.Map("map_canvas",
+             		{
+						center: MapCenter,
+             		    zoom: 13,
+             		    // Масштабирование карты колесом
+             		    behaviors: ['default', 'scrollZoom']
+             		}
+                );
+            $('#search_form').submit(function () {
+                var search_query = $('input:first').val();
+
+                ymaps.geocode(search_query, {results: 100}).then(function (res) {
+                    myMap.geoObjects.removeAll();
+                    myMap.geoObjects.add(res.geoObjects);
+                });
+                return false;
+            });            
+
+            var CurNameWindow = GetName();
+            var Ed = CurNameWindow.indexOf("LabelEditor");
+            if (CurNameWindow.indexOf("1C81") >= 0) {
+                map_for_1c81 = true;
+                SetName(CurNameWindow);
+            };
+
+            if (Ed == 0) {
+				
+			    myMap.events.add('click', function (e) {
+                    
+			        var coords = e.get('coords');
+					var sCoords = ConvertWGS84NMEA(coords[0]).toFixed(4) + ", " + ConvertWGS84NMEA(coords[1]).toFixed(4);
+
+			        // Отправим запрос на геокодирование
+					ymaps.geocode(coords).then(function (res) {
+						// Добавим на карту метку в точку, по координатам которой запрашивали обратное геокодирование
+						var PlaceMarkWithCoords = new ymaps.Placemark(coords, 
+								{ iconContent: sCoords }, 
+								//{ preset: 'twirl#redStretchyIcon', balloonMaxWidth: '250' }
+								{
+									preset: "islands#redStretchyIcon",
+									// Отключаем кнопку закрытия балуна.
+									balloonCloseButton: false,
+									// Балун будем открывать и закрывать кликом по иконке метки.
+									hideIconOnBalloonOpen: false
+								}							
+							);					
+							
+							myMap.geoObjects.removeAll();
+							myMap.geoObjects.add(PlaceMarkWithCoords);
+							
+						});
+					//setWindowName("LabelEditor_" + sCoords); - старый способ оповещения
+					
+					var button = document.getElementById("ClickEvent");
+					button.apObjectType = "map";
+					button.apObjectID   = "";
+					button.apValue 	    = sCoords;
+					
+					if (myMap.balloon.isOpen())	{
+						myMap.balloon.close();
+					}
+					button.click();
+					
+				});
+            }
+            //vd_181113 Добавлена константа initializeOK
+            initializeOK = true;
+        }
+                         		
+		function Convert(coor)  {  	
+			var flTemp =  coor;
+			var nTemp =  flTemp / 100.0;  
+			nTemp = nTemp - (nTemp%1); 
+			var flMin = flTemp - 100.0 * nTemp;
+			var Co = nTemp + flMin / 60.0;
+			result = Co.toFixed(6);
+											
+			return result;		 
+		}
+		
+		
+		
+		function GetName() {
+			return window.name;
+		}
+		function SetName(value) {
+			window.name = value;
+		}
+
+		//конвертация координат
+		function ConvertWGS84NMEA(coor) {
+			NMEA_coord = Math.floor(coor) * 100 + (coor - Math.floor(coor)) * 60;
+		
+			return NMEA_coord;
+		}
+		
+		//вывод маркера на карту		
+		function setMarker(lat, lon, icon, Header, Body, Footer, Help, Order) {
+
+			//значки Яндекс-карт: http://api.yandex.ru/maps/doc/jsapi/2.x/ref/reference/option.presetStorage.xml		
+		     if (icon=="")
+			 {				 
+		        var options = {
+				// Опции
+				iconImageSize: [32, 32], // размеры картинки
+				iconImageOffset: [-16, -32], // смещение картинки
+				preset: "twirl#redStretchyIcon",
+				balloonCloseButton: true  // убираем знак закрытия из балуна, т.к. нажатие по этой кнопки в IE 9 приводит к исключению
+				}
+			 }			 
+			 else
+		     {
+			 	var options = { 
+					// Опции				
+				 	iconLayout: 'default#image',
+				 	iconImageHref: icon, // картинка иконки
+					iconImageSize: [32, 32], // размеры картинки
+					iconImageOffset: [-16, -32], // смещение картинки				
+					balloonCloseButton: true // убираем знак закрытия из балуна
+			 	}
+			 }
+					
+		    var myPlacemark = new ymaps.Placemark([Convert(lat), Convert(lon)],	
+				{   // Свойства              
+	                balloonContentHeader: Header,
+	                balloonContentBody: Body,                
+	                balloonContentFooter: Footer,
+	                hintContent: Help,
+					iconContent: Order
+				},
+				options);
+			 myMap.geoObjects.add(myPlacemark);
+		}
+		
+		// Удаляем все, что было отображено ранее
+		function ClearCollection() {			
+		    if (myMap != null)
+		        myMap.geoObjects.removeAll();
+		}  
+
+		function GoToMarker(lat, lon) {
+			
+			myMap.setBounds([[Convert(lat),Convert(lon)], [Convert(lat),Convert(lon)]], {checkZoomRange: true});
+			
+		}
+			
+		function SetBounds(lat1, lon1, lat2, lon2) {
+			
+			myMap.setBounds([[Convert(lat1),Convert(lon1)], [Convert(lat2),Convert(lon2)]], {checkZoomRange: true});
+			
+		}
+		
+		function setPolyline(pointsLat, pointsLon, pointsTimes, strokeColor, strokeWidth, strokeStyle, opacity, strPolygone, strDuration, strDistance, strHint, strID) {
+			
+			var arPointsLat  = pointsLat.split(";");   // Точки широты маршрута
+			var arPointsLon  = pointsLon.split(";");   // Точки долготы маршрута	
+			var arPointsPol  = strPolygone.split(";"); // Точки полигона трека
+			var arPointsTime = pointsTimes == "" ? null : pointsTimes.split(";"); // Время точек
+			
+			var length = arPointsLat.length;
+			
+			var geometry = new Array(); 			
+			
+			for (var i=0; i<length; i++)				
+			{      
+				geometry[i] = [Convert(arPointsLat[i]), Convert(arPointsLon[i])];
+			}
+						
+			//outline 	String		 Наличие обводки. 			
+			//strokeOpacity 	Number		 Прозрачность контура. 
+						
+			polyline = new ymaps.Polyline(geometry, {hintContent: strHint, APID: strID}, 
+			options = {
+						balloonCloseButton: true, 
+				        draggable:     false,
+				        opacity:  	   opacity,	     // Общая прозрачность 
+				        strokeOpacity: opacity,      // Прозрачность контура
+				        strokeColor:   strokeColor,  // Цвет
+				        strokeWidth:   strokeWidth,  // Толщина линии
+				        strokeStyle:   strokeStyle   // Стиль	
+            		  }
+            );
+			
+			polyline.events.add('click', OnPolylineClick);
+			polyline.events.add('mousemove', OnPolylineMousemove);
+			
+			polyline.properties.set("APID",   strID);
+			polyline.properties.set("arTime", arPointsTime);
+			polyline.properties.set("Legend", strHint);
+			
+                 
+            myMap.geoObjects.add(polyline);
+        }        
+		
+		function OnPolylineClick(e) {
+			var coords   = e.get('coords');
+			var polyline = e.get('target');
+			
+			var button = document.getElementById("ClickEvent");
+			button.apObjectType = "polyline";
+			button.apObjectID   = polyline.properties.get("APID");
+			button.apValue 	    = coords[0].toFixed(6) + ", " + coords[1].toFixed(6);
+			
+			if (myMap.balloon.isOpen())	{
+				myMap.balloon.close();
+			}
+			button.click();
+		}
+		
+		function OnPolylineMousemove(e) {
+			var polyline = e.get('target');
+			polyline.properties.set("hintContent", getPolylineLegend(polyline, e.get('coords')));
+		}
+		
+		function getPolylineLegend(polyline, coords) {
+			var time = null;
+			var geometry = polyline.geometry;
+			var arTime   = polyline.properties.get("arTime");
+			var i, len, minDist, dist;
+			minDist = 1000000000;
+			
+			if( arTime == null )
+				return polyline.properties.get("Legend")
+			else {
+				
+				len = geometry.getLength();
+				
+				for (i = 0; i < len; ++i) {
+					dist = ymaps.coordSystem.geo.getDistance(geometry.get(i), coords);
+					if (dist < minDist) {
+						minDist = dist;
+						time = arTime[i];
+					}
+				}
+				
+				if( time == null ) 
+					return polyline.properties.get("Legend")
+				else
+					return polyline.properties.get("Legend") + " - " + time;
+			}
+		}
+		
+		function setBalloon(Lat, Lon, Caption) {
+			if (myMap.balloon.isOpen())	{
+				myMap.balloon.close();
+			}
+			myMap.balloon.open([Lat, Lon], Caption, 
+				{
+        			closeButton: true
+    			});			
+		}
+		
+		function showPanel() {    	
+			
+			_map_canvas = document.getElementById("map_canvas");
+			_panel = document.getElementById("directions_panel");
+			
+			if (panelIsVisible == false)  
+		    {  
+		        _map_canvas.style.width='70%';  
+		        panelIsVisible = true;                   
+		    }  
+		   	else  
+		    {  
+		        _map_canvas.style.width='100%';  		     		        
+		        panelIsVisible = false;
+			}	  
+			
+			myMap.container.fitToViewport(); // Перерисовывает карту			
+		}
+
+        //функция для выполнения кода, переданного из учетной системы
+		function ExecCommand() {
+		    //чтение переданной команды
+		    code = document.getElementById("ExtCommand").innerHTML;
+		    //выполнение комадны
+		    result = "" + eval(code);
+		    //запись результата
+		    document.getElementById("BufferData").innerHTML = result;
+		}
+						
+	</script>
+	
+</head>
+
+<BODY>
+	  	
+	<form id="formInfo">    
+	    <input style="display:none" id="routeInfo" type="button" value="Показать панель" onclick="showPanel();" />        
+	</form>                                                                                                   
+	<div id="map_canvas" style="float:left;width:100%;height:100%;"></div>
+	<input id="closePanel" type="button" value="Скрыть панель" onclick="showPanel();" />         	
+	<div id="directions_panel" style="height:100%;overflow-y:scroll;background-color:#FFEE77;margin:10px;border-width:2px;"></div>	
+	<div id="ExtCommand" style="display:none">extcommand</div>
+	<div id="EventName" style="display:none">js_event</div>
+	<div id="BufferData" style="display:none">js_result</div>
+	<input id="SendEvent" type=button style="display:none" onmouseup="ExecCommand();" />  
+	<input id="ClickEvent" style="display:none" type=button apObjectType="" apObjectID="" apValue="" />
+
+</BODY>
+
+</HTML>

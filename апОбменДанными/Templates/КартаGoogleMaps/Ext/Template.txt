@@ -1,0 +1,401 @@
+﻿<!--
+Пример использования сервиса Google Карты.
+Условия использования сервиса: http://www.google.com/intl/ru_ru/help/terms_maps.html
+
+Версия скрипта 2.0 от 04.02.17
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+	<!--Используем IE9, так как API поддерживает версии с 9 по 11 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<META name=GENERATOR content="MSHTML 8.00.7600.16671">
+	<META name=viewport content="initial-scale=1.0, user-scalable=no">
+	<META content="text/html; charset=UTF-8" http-equiv=content-type>
+
+	<title>	
+		Google maps API
+	</title>
+
+	<style type="text/css">
+		.tooltip{
+		    border:thin 1px #eee;
+		    background-color:#FFFBF0;
+		    padding:5px;
+		    
+		}	
+		html,body {
+			padding:0px;
+			margin:0px;
+			height:100%;
+			overflow:hidden;
+		}
+	</style>
+	       
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="http://www.geocodezip.com/scripts/v3_poly_tooltip.js"></script>
+
+   	<script type="text/javascript">
+
+  var myMap;
+  var directionsDisplay;
+  var panelIsVisible = false;
+  var MarkerEditor = null;
+  var map_for_1c81;
+  var arr_markers = new Array();    //массив маркеров
+  var latlngbounds;
+  var arrPlanDisplays = new Array();
+  var arrFactDisplays = new Array(); 
+  var displayListener;
+  
+  //{{vd_181119
+		
+		var initializeOK = false;  // Скрипт загружен и готов к работе
+		var onloadOK     = false;  // Сработал onload. Если initializeOK = false то скрипт больше не загрузится, нужно перегружать страничку.
+				
+		window.onload = function()
+		{
+			if(this.google !== undefined) {
+				initialize();
+			} 
+			onloadOK = true; 			
+		}
+	//}}vd_181119
+  
+  
+  function initialize() {	//функция инициализации, срабатывает после загрузки окна
+
+    map_for_1c81 = false;
+	
+	var MapCenter = new google.maps.LatLng(55.76, 37.64); // Москва
+	
+    //получим координаты центра карты						
+	var arCenter = GetName().split("@"); 
+	if (arCenter.length == 3 && arCenter[0] != 0 ) {
+		SetName(arCenter[2]);
+		MapCenter = new google.maps.LatLng(arCenter[0], arCenter[1]);
+	}
+	 	  
+	var myOptions = {
+		zoom: 11,
+		center: MapCenter,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	
+	myMap = new google.maps.Map(document.getElementById("map_canvas"), myOptions);	
+	latlngbounds = new google.maps.LatLngBounds();	
+		
+	directionsDisplay = new google.maps.DirectionsRenderer();	  	 	  	  	
+	directionsDisplay.setMap(myMap);
+	//directionsDisplay.setPanel(document.getElementById("directionsPanel")); 
+
+	var CurNameWindow = GetName();
+	var Ed = CurNameWindow.indexOf("LabelEditor");
+	  	if (CurNameWindow.indexOf("1C81") >= 0) {
+	  	    map_for_1c81 = true;
+	  	    SetName(CurNameWindow);
+	  	};	
+	if (Ed == 0) {
+		google.maps.event.addListener(myMap, 'click', function(event) {				
+			
+			ClearMarkers();
+			var sCoords = ConvertWGS84NMEA(event.latLng.lat()).toFixed(4) + ", " + ConvertWGS84NMEA(event.latLng.lng()).toFixed(4);
+					
+			addMarkerEditor(event.latLng, sCoords);
+			
+			var button = document.getElementById("ClickEvent");
+			button.apObjectType = "map";
+			button.apObjectID   = "";
+			button.apValue 	    = sCoords;
+			
+			button.click();
+			
+			});
+	    };
+	    
+	var initializeOK = false; //vd_181119
+	}
+	
+	function addMarkerEditor(location, MyCoords) {
+		
+		removeMarkerEditor();
+		
+		MarkerEditor = new google.maps.Marker({
+			position: location,
+			map: myMap,
+			//shadow: shadow,
+			//icon: "",
+			title: MyCoords,
+			zIndex: 999
+		});
+	};
+	
+	function removeMarkerEditor() {
+		if (MarkerEditor != null) {
+		    MarkerEditor.setMap(null);
+		    MarkerEditor = null;
+		}
+	}
+	   
+	function Convert(coor)  {	
+		var flTemp =  coor;
+		var nTemp =  flTemp / 100.0;  
+		nTemp = nTemp - (nTemp%1); 
+		var flMin = flTemp - 100.0 * nTemp;
+		var Co = nTemp + flMin / 60.0;
+		result = Co.toFixed(6);
+										
+		return result;		 
+	}
+	
+	function ConvertWGS84NMEA(coor) {
+		NMEA_coord = Math.floor(coor) * 100 + (coor - Math.floor(coor)) * 60;
+		
+		return NMEA_coord;
+	}
+
+	function GetName() {
+		return window.name;
+	}
+	
+	function SetName(value) {
+		window.name = value;
+	}
+	  
+    //для передачи координат используем div СoordinatesСenter
+	function setWindowName(coords) {
+	    Ed = false;
+	    end_name = "";
+
+	    Ed = GetName().indexOf("_initEnd") >= 0;
+
+	    if (Ed) end_name = "_initEnd";
+	    SetName(coords + end_name);
+	}
+  
+	function alertMsg(text){
+  		alert(text);
+  	}
+    
+	//вывод маркера на карту
+	function setMarker(lat, lon, icon, Header, Body, Footer, Help) {
+		
+  	   // Координаты маркера
+	   var myLatlng = new google.maps.LatLng(Convert(lat), Convert(lon));
+  
+	   var contentString = '<div id="content">' + Header + '<br>' + Body + '<br>' + Footer + '</div>';
+	   
+	   var infowindow = new google.maps.InfoWindow(
+		   {
+		     content: contentString
+		   }
+		   ); 
+	   	   
+	   var size = new google.maps.Size(32, 32);
+	   var origin = new google.maps.Point(0, 0);
+	   var offset = new google.maps.Point(16, 32);
+	   var iconImage = new google.maps.MarkerImage(icon, size, origin, offset);
+	   
+	   var marker = new google.maps.Marker({
+	     position: myLatlng,
+	     map: myMap,
+	     title: Help,
+	     icon: iconImage
+	   });
+	   
+	   arr_markers[arr_markers.length] = marker;
+	   google.maps.event.addListener(marker, 'click', function () {	   
+	   infowindow.open(myMap, marker);
+	   });	 
+
+	}  
+
+    // Центрируем и масштабируем карту по маркерам		
+	function ShowAllMarkers() {
+		var length = arr_markers.length;	
+		if (length != 0)
+		{
+			MarkersBounds = new google.maps.LatLngBounds(arr_markers[0].getPosition(), arr_markers[0].getPosition());
+			var i = 0;
+		
+			for (i=1; i<length-1; i++)				
+			{      
+				MarkersBounds.extend(arr_markers[i].getPosition());
+			}
+			
+			myMap.setCenter(MarkersBounds.getCenter(), myMap.fitBounds(MarkersBounds));
+		}		
+	}	
+
+ 	function GoToMarker(lat, lon) {
+		
+		var myLatlng = new google.maps.LatLng(Convert(lat), Convert(lon));
+		
+		var bounds = new google.maps.LatLngBounds(myLatlng, myLatlng);	 
+		
+		myMap.fitBounds(bounds);		
+	}
+	
+	function SetBounds(lat1, lon1, lat2, lon2) {
+		
+		var myLatlng1= new google.maps.LatLng(Convert(lat1), Convert(lon1));
+		var myLatlng2= new google.maps.LatLng(Convert(lat2), Convert(lon2));
+		
+		var bounds = new google.maps.LatLngBounds(myLatlng1, myLatlng2);
+		
+		myMap.fitBounds(bounds);		
+	}
+	
+ 	
+	// Удаляем все, что было отображено ранее	
+	function ClearCollection() { 		
+        ClearMarkers(); 
+	}
+
+	// Удаляем созданные маркеры	
+	function ClearMarkers() {
+	    if (arr_markers != null) {
+	        for (var i in arr_markers) {
+	            arr_markers[i].setMap(null);
+	        }
+	        arr_markers = new Array();
+	    }
+		removeMarkerEditor();
+	}
+	
+	function setPolyline(pointsLat, pointsLon, pointsTimes, strokeColor, strokeWidth, strokeStyle, opacity, strPolygone,  strDuration, strDistance, strHint, strID) {
+	
+		var arPointsLat = pointsLat.split(";");   // Точки широты маршрута
+		var arPointsLon = pointsLon.split(";");	  // Точки долготы маршрута	
+		//var arPointsPol  = strPolygone.split(";"); // Точки полигона трека
+		var arPointsTime = pointsTimes.split(";"); // Время точек
+		
+		var length = arPointsLat.length;
+		
+		var latStart = arPointsLat[length-2];
+		var lonStart = arPointsLon[length-2];
+		
+		var latFin = arPointsLat[length-1];
+		var lonFin = arPointsLon[length-1];   			
+		
+		var path = new Array();
+		
+		for (var i=0; i<length; i++)				
+		{      
+			path[i] = new google.maps.LatLng(Convert(arPointsLat[i]), Convert(arPointsLon[i]));
+		}
+					
+		var options = 
+		{
+			 icons: [{ // стрелки трека
+				icon: {path: 'M -1,2 0,-1 1,2 0,1'},
+				repeat: '200px',				
+				offset: '50%'
+			 }],
+		     Path: path,		     
+		     map: myMap,		     		     
+		     strokeOpacity: opacity,      // Прозрачность контура
+			 strokeColor:   strokeColor,  // Цвет
+			 strokeWeight:  strokeWidth   // Толщина линии
+	   	 }
+						
+		var polyline = new google.maps.Polyline(options);
+		polyline["APID"]   = strID;
+		polyline["Legend"] = strHint;
+		polyline["arTime"] = arPointsTime;
+		
+		
+        var tooltipOptions={ 
+            poly: polyline, 
+            content: "", 
+            cssClass: 'tooltip'
+        };
+		
+		polyline["tooltip"] = new Tooltip(tooltipOptions);
+		
+ 		google.maps.event.addListener(polyline, "mouseover", OnPolylineMouseover);
+	}
+	
+	function OnPolylineMouseover(e) {
+		this.tooltip.setContent(getPolylineLegend(this, e.latLng));
+   	}		
+	
+	function getPolylineLegend(polyline, LatLng) {
+		var time 	= null;
+		var path 	= polyline.getPath();
+		var arTime  = polyline.arTime;
+		
+		var minDist = 1000000000;
+		var len = path.getLength();
+		
+		for (var i = 0; i < len; ++i) {
+			var dist = google.maps.geometry.spherical.computeDistanceBetween(path.getAt(i), LatLng)
+			if (dist < minDist) {
+				minDist = dist;
+				time = arTime[i];
+			}
+		}
+		
+		if( time == null )
+			return polyline.Legend;
+		else
+			return polyline.Legend + " - " + time;
+	}
+    
+	function showPanel() { 	
+		_map_canvas = document.getElementById("map_canvas");
+		_panel = document.getElementById("directions_panel");
+		
+		if (panelIsVisible == false)  
+	    {  
+	        _map_canvas.style.width='70%';  
+	        _panel.style.width='30%'; 
+	        
+	        panelIsVisible = true;                   
+	    }  
+	   	else  
+	    {  
+	        _map_canvas.style.width='100%';  
+	        _panel.style.width='0%';  
+	        
+	        panelIsVisible = false;
+	    } 	   	    
+	}
+	
+    //функция для выполнения кода, переданного из учетной системы
+	function ExecCommand () {
+        //чтение переданной команды
+	    code = document.getElementById("ExtCommand").innerHTML;
+        //выполнение комадны
+	    result = "" + eval(code);
+        //запись результата
+        document.getElementById ("BufferData").innerHTML = result;
+    }
+
+	//лучше всего вызвать initialize в событии загрузки, т.к. callback происходит раньше, чем будут установлены параметры в учетной системе
+    
+	try {
+		google.maps.event.addDomListener(window, 'load', initialize);
+	} catch (err) {
+	}
+
+</SCRIPT>
+
+</HEAD>
+  
+<BODY style="PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px" >	  	
+<form id="formInfo">    
+    <input style="display:none" id="routeInfo" type="button" value="Показать панель" onclick="showPanel();" />        
+</form>                                                                                                  
+<div id="map_canvas" style="float:left;width:100%;height:100%;"></div>
+<input id="closePanel" type="button" value="Скрыть панель" onclick="showPanel();" />        
+<div id="directions_panel" style="width:30%;height:100%;overflow-y:scroll;background-color:#FFEE77;"></div>               	
+<div id="ExtCommand" style="display:none">extcommand</div>
+<div id="EventName" style="display:none">js_event</div>
+<div id="BufferData" style="display:none">js_result</div>
+<input id="SendEvent" type=button style="display:none" onmouseup="ExecCommand();" />
+<input id="ClickEvent" style="display:none" type=button apObjectType="" apObjectID="" apValue="">
+</BODY>
+</HTML>

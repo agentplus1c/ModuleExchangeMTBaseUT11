@@ -1,0 +1,1504 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки торговых агентов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="148">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="149"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияИконка" id="174">
+					<Width>2</Width>
+					<Height>1</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация иконка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перейти на главную страницу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Hyperlink>true</Hyperlink>
+					<Picture>
+						<xr:Abs>Picture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="175"/>
+					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="176"/>
+					<Events>
+						<Event name="Click">КомандаПоказатьГлавнуюФорму</Event>
+					</Events>
+				</PictureDecoration>
+				<Button name="ПоказатьГлавнуюФорму" id="165">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьГлавнуюФорму</CommandName>
+					<Font ref="style:NormalTextFont" kind="StyleItem"/>
+					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="166"/>
+				</Button>
+				<LabelDecoration name="ДекорацияСмТакже" id="155">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>cм. также:</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Смотрите также</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="157"/>
+				</LabelDecoration>
+				<Button name="ПоказатьОбменДанными" id="172">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьОбменДанными</CommandName>
+					<ExtendedTooltip name="ПоказатьОбменДаннымиРасширеннаяПодсказка" id="173"/>
+				</Button>
+				<Button name="ПоказатьМобильныеУстройства" id="146">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьМобильныеУстройства</CommandName>
+					<ExtendedTooltip name="ПоказатьМобильныеУстройстваРасширеннаяПодсказка" id="147"/>
+				</Button>
+				<Button name="ПоказатьСпискиТорговыхТочек" id="185">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьСпискиТорговыхТочек</CommandName>
+					<ExtendedTooltip name="ПоказатьСпискиТорговыхТочекРасширеннаяПодсказка" id="186"/>
+				</Button>
+				<PictureDecoration name="ДекорацияКоманднаяПанель" id="152">
+					<Enabled>false</Enabled>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тест</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="154"/>
+				</PictureDecoration>
+				<Button name="СохранитьВсе" id="163">
+					<Type>Hyperlink</Type>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.СохранитьВсе</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="СохранитьВсеРасширеннаяПодсказка" id="164"/>
+				</Button>
+				<Button name="ФормаСправка" id="150">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<Width>3</Width>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.Справка</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Help</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>?</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="151"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="НастройкиТорговыхПредставителей" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки торговых представителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки торговых представителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НастройкиТорговыхПредставителейРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиСлева" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Торговые агенты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаНастройкиСлеваРасширеннаяПодсказка" id="110"/>
+					<ChildItems>
+						<Table name="НастройкиАгентов" id="1">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<DataPath>Объект.НастройкиАгентов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НастройкиАгентовКонтекстноеМеню" id="2">
+								<ChildItems>
+									<Button name="НастройкиАгентовКонтекстноеМенюОткрытьКарточкуПользователя" id="187">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОткрытьКарточкуПользователя</CommandName>
+										<ExtendedTooltip name="НастройкиАгентовКонтекстноеМенюОткрытьКарточкуПользователяРасширеннаяПодсказка" id="188"/>
+									</Button>
+									<Button name="НастройкиАгентовНастроитьМобильноеПриложениеМеню" id="119">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НастроитьМобильноеПриложение</CommandName>
+										<ExtendedTooltip name="НастройкиАгентовНастроитьМобильноеПриложениеМенюРасширеннаяПодсказка" id="120"/>
+									</Button>
+									<ButtonGroup name="НастройкиАгентовКонтекстноеМенюГруппаНастройкиКопирование" id="206">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройки агентов контекстное меню группа настройки копирование</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройки агентов контекстное меню группа настройки копирование</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="НастройкиАгентовКонтекстноеМенюГруппаНастройкиКопированиеРасширеннаяПодсказка" id="207"/>
+										<ChildItems>
+											<Button name="НастройкиАгентовКопироватьНастройкиМобильногоПриложенияМеню" id="121">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КопироватьНастройкиПользователя</CommandName>
+												<ExtendedTooltip name="НастройкиАгентовКопироватьНастройкиМобильногоПриложенияМенюРасширеннаяПодсказка" id="122"/>
+											</Button>
+											<Button name="НастройкиАгентовПрименитьСкопированныеНастройкиМобильногоПриложенияМеню" id="123">
+												<Type>CommandBarButton</Type>
+												<Enabled>false</Enabled>
+												<CommandName>Form.Command.ПрименитьСкопированныеНастройкиПользователя</CommandName>
+												<ExtendedTooltip name="НастройкиАгентовПрименитьСкопированныеНастройкиМобильногоПриложенияМенюРасширеннаяПодсказка" id="124"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="НастройкиАгентовКонтекстноеМенюГруппаНастройкиПоУмолчанию" id="200">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройки агентов контекстное меню группа настройки по умолчанию</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Настройки агентов контекстное меню группа настройки по умолчанию</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="НастройкиАгентовКонтекстноеМенюГруппаНастройкиПоУмолчаниюРасширеннаяПодсказка" id="201"/>
+										<ChildItems>
+											<Button name="НастройкиАгентовКонтекстноеМенюЗапомнитьНастройкиПоУмолчанию" id="202">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗапомнитьНастройкиПоУмолчанию</CommandName>
+												<ExtendedTooltip name="НастройкиАгентовКонтекстноеМенюЗапомнитьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="203"/>
+											</Button>
+											<Button name="НастройкиАгентовКонтекстноеМенюПрименитьНастройкиПоУмолчанию" id="204">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПрименитьНастройкиПоУмолчанию</CommandName>
+												<ExtendedTooltip name="НастройкиАгентовКонтекстноеМенюПрименитьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="205"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="НастройкиАгентовКоманднаяПанель" id="3">
+								<ChildItems>
+									<Button name="НастройкиАгентовОткрытьКарточкуПользователя" id="189">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Command.ОткрытьКарточкуПользователя</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Открыть</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="НастройкиАгентовОткрытьКарточкуПользователяРасширеннаяПодсказка" id="190"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НастройкиАгентовРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="НастройкиАгентовСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>НастройкиАгентов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиАгентовСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="НастройкиАгентовСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкиАгентовСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>НастройкиАгентов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиАгентовСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="НастройкиАгентовСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкиАгентовУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>НастройкиАгентов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиАгентовУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="НастройкиАгентовУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">НастройкиАгентовПриОкончанииРедактирования</Event>
+								<Event name="Selection">НастройкиАгентовВыбор</Event>
+								<Event name="BeforeAddRow">НастройкиАгентовПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">НастройкиАгентовПередУдалением</Event>
+								<Event name="OnActivateRow">НастройкиАгентовПриАктивизацииСтроки</Event>
+								<Event name="ChoiceProcessing">НастройкиАгентовОбработкаВыбора</Event>
+								<Event name="BeforeRowChange">НастройкиАгентовПередНачаломИзменения</Event>
+								<Event name="OnActivateCell">НастройкиАгентовПриАктивизацииЯчейки</Event>
+								<Event name="OnChange">НастройкиАгентовПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<PictureField name="НастройкиАгентовСтатусНастроек" id="106">
+									<DataPath>Объект.НастройкиАгентов.СтатусНастроек</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус настроек торгового агента</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<ValuesPicture>
+										<xr:Abs>ValuesPicture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="НастройкиАгентовСтатусНастроекКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="НастройкиАгентовСтатусНастроекРасширеннаяПодсказка" id="108"/>
+								</PictureField>
+								<InputField name="НастройкиАгентовПользователь" id="14">
+									<DataPath>Объект.НастройкиАгентов.Пользователь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterFont ref="style:NormalTextFont" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<FooterHorizontalAlign>Left</FooterHorizontalAlign>
+									<ClearButton>false</ClearButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="НастройкиАгентовПользовательКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="НастройкиАгентовПользовательРасширеннаяПодсказка" id="16"/>
+								</InputField>
+								<InputField name="НастройкиАгентовПользовательПодразделение" id="130">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подразделение торгового агента</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НастройкиАгентовПользовательПодразделениеКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="НастройкиАгентовПользовательПодразделениеРасширеннаяПодсказка" id="132"/>
+								</InputField>
+								<InputField name="НастройкиАгентовПредставлениеМУ" id="133">
+									<DataPath>Объект.НастройкиАгентов.ПредставлениеМУ</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Мобильное устройство, закрепленное за агентом. При выборе МУ из списка предлагаются только свободные МУ (не закрепленные ни за одним из агентов).</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<Wrap>false</Wrap>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<CreateButton>true</CreateButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="НастройкиАгентовПредставлениеМУКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="НастройкиАгентовПредставлениеМУРасширеннаяПодсказка" id="135"/>
+									<Events>
+										<Event name="Clearing">НастройкиАгентовПредставлениеМУОчистка</Event>
+										<Event name="ChoiceProcessing">НастройкиАгентовПредставлениеМУОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="НастройкиАгентовРаботает" id="169">
+									<DataPath>Объект.НастройкиАгентов.Работает</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Работает</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сотрудник в настоящий момент работает. Если флажок снят, то сотрудник на больничном, или в отпуске.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НастройкиАгентовРаботаетКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="НастройкиАгентовРаботаетРасширеннаяПодсказка" id="171"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкиСправа" id="144">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиСправаРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиАгента" id="99">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки текущего агента</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки текущего агента</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаНастройкиАгентаРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияКартинкаВнимание" id="191">
+									<Visible>false</Visible>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация картинка внимание</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Abs>Picture.png</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияКартинкаВниманиеКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="ДекорацияКартинкаВниманиеРасширеннаяПодсказка" id="193"/>
+								</PictureDecoration>
+								<CommandBar name="ГруппаПраваяКоманднаяПанель" id="140">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа правая командная панель</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа правая командная панель</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаПраваяКоманднаяПанельРасширеннаяПодсказка" id="141"/>
+									<ChildItems>
+										<Button name="НастройкиАгентовНастроитьМобильноеПриложение" id="49">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<OnlyInAllActions>true</OnlyInAllActions>
+											<CommandName>Form.Command.НастроитьМобильноеПриложение</CommandName>
+											<ExtendedTooltip name="НастройкиАгентовНастроитьМобильноеПриложениеРасширеннаяПодсказка" id="50">
+												<TitleHeight>1</TitleHeight>
+											</ExtendedTooltip>
+										</Button>
+										<Button name="КопироватьНастройкиПользователя" id="142">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.КопироватьНастройкиПользователя</CommandName>
+											<ExtendedTooltip name="КопироватьНастройкиПользователяРасширеннаяПодсказка" id="143"/>
+										</Button>
+										<ButtonGroup name="ГруппаНастройкиПоУмолчанию" id="194">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройки по умолчанию</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа настройки по умолчанию</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаНастройкиПоУмолчаниюРасширеннаяПодсказка" id="195"/>
+											<ChildItems>
+												<Button name="ЗапомнитьНастройкиПоУмолчанию" id="196">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.Command.ЗапомнитьНастройкиПоУмолчанию</CommandName>
+													<ExtendedTooltip name="ЗапомнитьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="197"/>
+												</Button>
+												<Button name="ПрименитьНастройкиПоУмолчанию" id="198">
+													<Type>CommandBarButton</Type>
+													<OnlyInAllActions>false</OnlyInAllActions>
+													<CommandName>Form.Command.ПрименитьНастройкиПоУмолчанию</CommandName>
+													<ExtendedTooltip name="ПрименитьНастройкиПоУмолчаниюРасширеннаяПодсказка" id="199"/>
+												</Button>
+											</ChildItems>
+										</ButtonGroup>
+									</ChildItems>
+								</CommandBar>
+								<UsualGroup name="ГруппаОсновныеЗначенияАгента" id="136">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основные значения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основные значения, используемые при создании новых документов в мобильном устройстве</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаОсновныеЗначенияАгентаРасширеннаяПодсказка" id="137"/>
+									<ChildItems>
+										<InputField name="СписокТорговыхТочек" id="182">
+											<DataPath>СписокТорговыхТочек</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Маршрут</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выгружать маршрут из списка торговых точек (партнеров).</v8:content>
+												</v8:item>
+											</ToolTip>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>true</CreateButton>
+											<ListChoiceMode>true</ListChoiceMode>
+											<QuickChoice>true</QuickChoice>
+											<ChooseType>false</ChooseType>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="СписокТорговыхТочекКонтекстноеМеню" id="183"/>
+											<ExtendedTooltip name="СписокТорговыхТочекРасширеннаяПодсказка" id="184"/>
+											<Events>
+												<Event name="OnChange">СписокТорговыхТочекПриИзменении</Event>
+												<Event name="StartChoice">СписокТорговыхТочекНачалоВыбора</Event>
+												<Event name="Opening">СписокТорговыхТочекОткрытие</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиАгентовОсновнаяОрганизация" id="17">
+											<DataPath>Items.НастройкиАгентов.CurrentData.ОсновнаяОрганизация</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация, от имени которой торговый агент оформляет документы.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиАгентовОсновнаяОрганизацияКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="НастройкиАгентовОсновнаяОрганизацияРасширеннаяПодсказка" id="19"/>
+											<Events>
+												<Event name="OnChange">НастройкиАгентовОсновноеЗначениеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиАгентовОсновнойСклад" id="20">
+											<DataPath>Items.НастройкиАгентов.CurrentData.ОсновнойСклад</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Склад, с которого торговый агент осуществляет продажи.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<ContextMenu name="НастройкиАгентовОсновнойСкладКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="НастройкиАгентовОсновнойСкладРасширеннаяПодсказка" id="22"/>
+											<Events>
+												<Event name="OnChange">СкладыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиАгентовМобильныйСклад" id="208">
+											<DataPath>Items.НастройкиАгентов.CurrentData.МобильныйСклад</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Указывается передвижной склад торгового агента (автомобиль). Доступно только при использовании настройки "Торговли с колес" (включается в разделе Обмен данными - Общие настройки - закладка "Основные").</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="НастройкиАгентовМобильныйСкладКонтекстноеМеню" id="209"/>
+											<ExtendedTooltip name="НастройкиАгентовМобильныйСкладРасширеннаяПодсказка" id="210"/>
+											<Events>
+												<Event name="OnChange">СкладыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиАгентовОсновнойТипЦены" id="23">
+											<DataPath>Items.НастройкиАгентов.CurrentData.ОсновнойТипЦены</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Основной вид цены продажи, закрепленной за агентом.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиАгентовОсновнойТипЦеныКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="НастройкиАгентовОсновнойТипЦеныРасширеннаяПодсказка" id="25"/>
+											<Events>
+												<Event name="OnChange">НастройкиАгентовОсновноеЗначениеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиАгентовМинимальныйТипЦены" id="213">
+											<DataPath>Items.НастройкиАгентов.CurrentData.МинимальныйТипЦены</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Минимальный вид цены продажи, закрепленной за агентом. Ниже указанных цен агенту запрещается продавать товар.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="НастройкиАгентовМинимальныйТипЦеныКонтекстноеМеню" id="214"/>
+											<ExtendedTooltip name="НастройкиАгентовМинимальныйТипЦеныРасширеннаяПодсказка" id="215"/>
+											<Events>
+												<Event name="OnChange">НастройкиАгентовОсновноеЗначениеПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПерсональныеЗначенияАгента" id="177">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Персональные значения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа персональные значения агента</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаПерсональныеЗначенияАгентаРасширеннаяПодсказка" id="178"/>
+									<ChildItems>
+										<InputField name="НастройкиАгентовПрефикс" id="96">
+											<DataPath>Items.НастройкиАгентов.CurrentData.Префикс</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Префикс нумерации документов в мобильном устройстве (использовать необязательно).</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиАгентовПрефиксКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="НастройкиАгентовПрефиксРасширеннаяПодсказка" id="98"/>
+											<Events>
+												<Event name="OnChange">НастройкиАгентовОсновноеЗначениеПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="НастройкиАгентовКаталогОбмена" id="179">
+											<DataPath>Items.НастройкиАгентов.CurrentData.КаталогОбмена</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Каталог обмена с мобильным устройством агента (при обмене через службу СОД или FTP). Если значение не указано (или указано 'Авто'), название каталога генерируется автоматически.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>20</Width>
+											<ContextMenu name="НастройкиАгентовКаталогОбменаКонтекстноеМеню" id="180">
+												<ChildItems>
+													<Button name="НастройкиАгентовКаталогОбменаКонтекстноеМенюПроставитьКаталогОбмена" id="211">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ПроставитьКаталогОбмена</CommandName>
+														<ExtendedTooltip name="НастройкиАгентовКаталогОбменаКонтекстноеМенюПроставитьКаталогОбменаРасширеннаяПодсказка" id="212"/>
+													</Button>
+												</ChildItems>
+											</ContextMenu>
+											<ExtendedTooltip name="НастройкиАгентовКаталогОбменаРасширеннаяПодсказка" id="181"/>
+											<Events>
+												<Event name="OnChange">НастройкиАгентовКаталогОбменаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаВыгружаемыеОбъекты" id="125">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружаемые данные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгружаемые данные в мобильное устройство</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ControlRepresentation>Picture</ControlRepresentation>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаВыгружаемыеОбъектыРасширеннаяПодсказка" id="126"/>
+									<ChildItems>
+										<Table name="КомпоновщикНастроекПользовательскиеНастройки" id="36">
+											<Autofill>true</Autofill>
+											<Footer>true</Footer>
+											<DataPath>КомпоновщикНастроек.UserSettings</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>CheckAll</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>HierarchicalList</ExcludedCommand>
+												<ExcludedCommand>List</ExcludedCommand>
+												<ExcludedCommand>Tree</ExcludedCommand>
+												<ExcludedCommand>UncheckAll</ExcludedCommand>
+												<ExcludedCommand>UseFieldAsValue</ExcludedCommand>
+											</CommandSet>
+											<ViewMode>All</ViewMode>
+											<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиКонтекстноеМеню" id="37"/>
+											<AutoCommandBar name="КомпоновщикНастроекПользовательскиеНастройкиКоманднаяПанель" id="38">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="39"/>
+											<SearchStringAddition name="КомпоновщикНастроекПользовательскиеНастройкиСтрокаПоиска" id="40">
+												<AdditionSource>
+													<Item>КомпоновщикНастроекПользовательскиеНастройки</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиСтрокаПоискаКонтекстноеМеню" id="41"/>
+												<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="КомпоновщикНастроекПользовательскиеНастройкиСостояниеПросмотра" id="43">
+												<AdditionSource>
+													<Item>КомпоновщикНастроекПользовательскиеНастройки</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиСостояниеПросмотраКонтекстноеМеню" id="44"/>
+												<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="КомпоновщикНастроекПользовательскиеНастройкиУправлениеПоиском" id="46">
+												<AdditionSource>
+													<Item>КомпоновщикНастроекПользовательскиеНастройки</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="КомпоновщикНастроекПользовательскиеНастройкиУправлениеПоискомКонтекстноеМеню" id="47"/>
+												<ExtendedTooltip name="КомпоновщикНастроекПользовательскиеНастройкиУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnChange">КомпоновщикНастроекПользовательскиеНастройкиПриИзменении</Event>
+											</Events>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСостояние" id="161">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа состояние</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа состояние</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="162"/>
+			<ChildItems>
+				<PictureField name="НастройкиАгентовСтатусНастроекИконка" id="158">
+					<DataPath>Items.НастройкиАгентов.CurrentData.СтатусНастроек</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>2</Width>
+					<Height>1</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ValuesPicture>
+						<xr:Abs>ValuesPicture.png</xr:Abs>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="НастройкиАгентовСтатусНастроекИконкаКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="НастройкиАгентовСтатусНастроекИконкаРасширеннаяПодсказка" id="160"/>
+				</PictureField>
+				<LabelDecoration name="ДекорацияСтатус" id="103">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус настроек торгового агента</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус настроек текущего торгового агента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ДекорацияСтатусКонтекстноеМеню" id="104"/>
+					<ExtendedTooltip name="ДекорацияСтатусРасширеннаяПодсказка" id="105"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.апОбменДанными</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.FTPАдрес</Field>
+				<Field>Объект.FTPПароль</Field>
+				<Field>Объект.FTPПользователь</Field>
+				<Field>Объект.АвтозапускОбменаДанными</Field>
+				<Field>Объект.ВерсияНастроек</Field>
+				<Field>Объект.ВидВыгрузки</Field>
+				<Field>Объект.ВыбАгент</Field>
+				<Field>Объект.ВыбНастройкиАгента</Field>
+				<Field>Объект.ВыгружатьИзображенияТоваров</Field>
+				<Field>Объект.ВыгружатьИсториюПродаж</Field>
+				<Field>Объект.ВыгружатьМаршруты</Field>
+				<Field>Объект.ВыгружатьСтартовыеНомера</Field>
+				<Field>Объект.ВыгружатьТоварыСНулевымОстатком</Field>
+				<Field>Объект.ВыгружатьТолькоПросроченныеДолги</Field>
+				<Field>Объект.ВыделятьЦветомПросроченныеДолги</Field>
+				<Field>Объект.ГлубинаИсторииПродаж</Field>
+				<Field>Объект.ЗапросыМобильныхУстройств</Field>
+				<Field>Объект.ИнтервалАвтообмена</Field>
+				<Field>Объект.ИнтервалВыгрузкиЗаказов</Field>
+				<Field>Объект.ИнтервалПросроченныхДолгов</Field>
+				<Field>Объект.ИспользоватьАвтообмен</Field>
+				<Field>Объект.ИспользоватьКонтрагентов</Field>
+				<Field>Объект.ИспользоватьНумерациюЦБД</Field>
+				<Field>Объект.ИспользоватьТорговыеТочки</Field>
+				<Field>Объект.ИспользоватьХарактеристики</Field>
+				<Field>Объект.КаталогОбмена</Field>
+				<Field>Объект.КатегорииДокументов</Field>
+				<Field>Объект.КоличествоИнтерваловИстории</Field>
+				<Field>Объект.ЛКЗапомнитьЛогинИПароль</Field>
+				<Field>Объект.ЛКИдентификаторУС</Field>
+				<Field>Объект.ЛКЛогин</Field>
+				<Field>Объект.ЛКНазваниеУС</Field>
+				<Field>Объект.ЛКПароль</Field>
+				<Field>Объект.ЛКПодтверждение</Field>
+				<Field>Объект.ЛКТокенУС</Field>
+				<Field>Объект.ОбновлятьДокументыПриЗагрузке</Field>
+				<Field>Объект.ОтветнаяВыгрузка</Field>
+				<Field>Объект.ОчищатьДокументыПередЗагрузкой</Field>
+				<Field>Объект.ОчищатьСправочникиПередЗагрузкой</Field>
+				<Field>Объект.ПериодХраненияЛогов</Field>
+				<Field>Объект.ПодтвержденияТолькоДляПроведенных</Field>
+				<Field>Объект.ПроводитьДокументыПриЗагрузке</Field>
+				<Field>Объект.РежимЗагрузкиЗаказов</Field>
+				<Field>Объект.СОДАдрес</Field>
+				<Field>Объект.СОДПорт</Field>
+				<Field>Объект.СОДПутьКПанелиУправления</Field>
+				<Field>Объект.СписокОчищаемыхДокументов</Field>
+				<Field>Объект.СписокОчищаемыхСправочников</Field>
+				<Field>Объект.СпособОбмена</Field>
+				<Field>Объект.СтатусыПартнеров</Field>
+				<Field>Объект.ТабСтартовыеНомера</Field>
+				<Field>Объект.ТабСтартовыеНомера.LineNumber</Field>
+				<Field>Объект.ТабСтартовыеНомера.ВидДокумента</Field>
+				<Field>Объект.ТабСтартовыеНомера.Наименование</Field>
+				<Field>Объект.ТабСтартовыеНомера.Организация</Field>
+				<Field>Объект.ТабСтартовыеНомера.Префикс</Field>
+				<Field>Объект.ТабСтартовыеНомера.СтартовыйНомер</Field>
+				<Field>Объект.УчитыватьРезервы</Field>
+				<Field>Объект.ЦветПросроченныхДолгов</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.НастройкиАгентов">
+					<Column name="Пользователь" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Агент</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ОсновнаяОрганизация" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Основная организация</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ОсновнойСклад" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Основной склад</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ОсновнойТипЦены" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Основной вид цены</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ВыгружаемыеОбъекты" id="6">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выгружаемые объекты</v8:content>
+							</v8:item>
+						</Title>
+						<Type/>
+					</Column>
+					<Column name="НастройкиМобильногоПриложения" id="7">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройки мобильного приложения</v8:content>
+							</v8:item>
+						</Title>
+						<Type/>
+					</Column>
+					<Column name="Префикс" id="9">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Префикс нумерации</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>5</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="КаталогОбмена" id="10">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Каталог обмена</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>100</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="СтатусНастроек" id="11">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Статус настроек</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>1</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="СсылкаМУ" id="5">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ссылка на МУ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="ПредставлениеМУ" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мобильное устройство</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:Type>v8:UUID</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="Работает" id="12">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сотрудник работает в данный момент</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+					<Column name="СсылкаСписокТТ" id="13">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ссылка на список ТТ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="МобильныйСклад" id="14">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мобильный склад</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+						</Type>
+					</Column>
+					<Column name="МинимальныйТипЦены" id="15">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Минимальный вид цены</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.СпискиТорговыхТочек">
+					<Column name="ID" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Внутренний уникальный идентификатор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Наименование" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>80</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+				<AdditionalColumns table="Объект.МобильныеУстройства">
+					<Column name="Пользователь" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пользователь</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+						</Type>
+					</Column>
+					<Column name="Наименование" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Наименование</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>64</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="ID" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Внутренний уникальный идентификатор</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>v8:UUID</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="КомпоновщикНастроек" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>КомпоновщикНастроек.FixedSettings</Field>
+				<Field>КомпоновщикНастроек.Settings</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ВыгружаемыеДанныеПоУмолчанию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружаемые данные по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="КопируемыеНастройкиДляВыбора" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копируемые настройки для выбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Settings>
+		</Attribute>
+		<Attribute name="КопияНастроек" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копия настроек, используется для применения скопированных настроек разным агентам</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СтррКонтекст" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура дополнительных параметров модуля формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВсегоСтрок" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокТорговыхТочек" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список торговых точек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПустаяКартинка" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустая картинка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Picture</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиПоУмоланию" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки по умоланию</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьМобильноеПриложение" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки мобильного приложения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить мобильное приложение для текущего агента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНастроитьМобильноеПриложение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КопироватьНастройкиПользователя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать настройки в память</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать настройки мобильного приложения у текущего пользователя в память</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаКопироватьНастройкиПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПрименитьСкопированныеНастройкиПользователя" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить скопированные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить скопированные настройки мобильного приложения к выбранным пользователям.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПрименитьСкопированныеНастройкиПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьМобильныеУстройства" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильные устройства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать мобильные устройства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить все изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+S</Shortcut>
+			<Action>КомандаСохранитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьГлавнуюФорму" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на главную страницу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+M</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьОбменДанными" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен данными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать окно обмена данными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьСпискиТорговыхТочек" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки торговых точек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать списки торговых точек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьКарточкуПользователя" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку пользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьКарточкуПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапомнитьНастройкиПоУмолчанию" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запомнить как "настройки по умолчанию"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запомнить настройки по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапомнитьНастройкиПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПрименитьНастройкиПоУмолчанию" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить "настройки по умолчанию"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить настройки по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПрименитьНастройкиПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Справка" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+1</Shortcut>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроставитьКаталогОбмена" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проставить каталог обмена в соответствии с идентификатором МУ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПроставитьКаталогОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
