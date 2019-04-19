@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -56,6 +56,7 @@
 						<xr:Abs>Picture.png</xr:Abs>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="199"/>
 					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="200"/>
 					<Events>
@@ -103,6 +104,7 @@
 					<Enabled>false</Enabled>
 					<Height>1</Height>
 					<HorizontalStretch>true</HorizontalStretch>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="174"/>
 					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="175"/>
 				</PictureDecoration>
@@ -783,6 +785,7 @@
 																<xr:Abs>Picture.png</xr:Abs>
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
 															<ContextMenu name="ДекорацияВыделитьВыгружатьИзображенияПартнеровКонтекстноеМеню" id="330"/>
 															<ExtendedTooltip name="ДекорацияВыделитьВыгружатьИзображенияПартнеровРасширеннаяПодсказка" id="331"/>
 														</PictureDecoration>
@@ -834,7 +837,7 @@
 																<app:item name="Отбор.Родитель">
 																	<app:value xsi:type="FormChoiceListDesTimeValue">
 																		<Presentation/>
-																		<Value xsi:type="xr:DesignTimeRef">07f097a7-679b-4f1c-a474-dfce7d72c887.e82591e4-69b5-420b-8b1f-9a9d722640be</Value>
+																		<Value xsi:type="xr:DesignTimeRef">Catalog.ВидыКонтактнойИнформации.СправочникПартнеры</Value>
 																	</app:value>
 																</app:item>
 															</ChoiceParameters>
@@ -1022,6 +1025,7 @@
 																<xr:Abs>Picture.png</xr:Abs>
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
 															<ContextMenu name="ДекорацияВыделитьИспользоватьПланыПродажПоТоварнымКатегориямКонтекстноеМеню" id="474"/>
 															<ExtendedTooltip name="ДекорацияВыделитьИспользоватьПланыПродажПоТоварнымКатегориямРасширеннаяПодсказка" id="475"/>
 														</PictureDecoration>
@@ -1070,6 +1074,7 @@
 																<xr:Abs>Picture.png</xr:Abs>
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
 															<ContextMenu name="ДекорацияВыделитьВыгружатьИзображенияТоваровКонтекстноеМеню" id="333"/>
 															<ExtendedTooltip name="ДекорацияВыделитьВыгружатьИзображенияТоваровРасширеннаяПодсказка" id="334"/>
 														</PictureDecoration>
@@ -1124,6 +1129,7 @@
 																<xr:Abs>Picture.png</xr:Abs>
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
 															<ContextMenu name="ДекорацияВыделитьВыгружатьИсториюПродажКонтекстноеМеню" id="336"/>
 															<ExtendedTooltip name="ДекорацияВыделитьВыгружатьИсториюПродажРасширеннаяПодсказка" id="337"/>
 														</PictureDecoration>
@@ -1177,6 +1183,7 @@
 																			<v8:content>Декорация история продаж отступ</v8:content>
 																		</v8:item>
 																	</Title>
+																	<FileDragMode>AsFile</FileDragMode>
 																	<ContextMenu name="ДекорацияИсторияПродажОтступКонтекстноеМеню" id="433"/>
 																	<ExtendedTooltip name="ДекорацияИсторияПродажОтступРасширеннаяПодсказка" id="434"/>
 																</PictureDecoration>
@@ -1690,6 +1697,7 @@
 																<xr:Abs>Picture.png</xr:Abs>
 																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
 															<ContextMenu name="ДекорацияВыделитьВыгружатьМаршрутыКонтекстноеМеню" id="341"/>
 															<ExtendedTooltip name="ДекорацияВыделитьВыгружатьМаршрутыРасширеннаяПодсказка" id="342"/>
 														</PictureDecoration>
@@ -2335,6 +2343,7 @@
 														<xr:Abs>Picture.png</xr:Abs>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
 													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
 													<ContextMenu name="ДекорацияКаталогДанныхРекомендацияИконкаКонтекстноеМеню" id="355"/>
 													<ExtendedTooltip name="ДекорацияКаталогДанныхРекомендацияИконкаРасширеннаяПодсказка" id="356"/>
 												</PictureDecoration>

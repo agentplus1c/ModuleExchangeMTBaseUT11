@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -72,6 +72,7 @@
 						<xr:Abs>Picture.png</xr:Abs>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="ДекорацияИконкаКонтекстноеМеню" id="61"/>
 					<ExtendedTooltip name="ДекорацияИконкаРасширеннаяПодсказка" id="62"/>
 					<Events>
@@ -120,6 +121,7 @@
 					<Height>1</Height>
 					<HorizontalStretch>true</HorizontalStretch>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="37"/>
 				</PictureDecoration>
@@ -153,6 +155,7 @@
 		<Table name="МобильныеУстройства" id="1">
 			<Representation>List</Representation>
 			<Footer>true</Footer>
+			<FileDragMode>AsFile</FileDragMode>
 			<DataPath>Объект.МобильныеУстройства</DataPath>
 			<CommandSet>
 				<ExcludedCommand>CancelSearch</ExcludedCommand>
@@ -262,6 +265,7 @@
 						<xr:Abs>ValuesPicture.png</xr:Abs>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="МобильныеУстройстваСтатусНастроекКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="МобильныеУстройстваСтатусНастроекРасширеннаяПодсказка" id="48"/>
 				</PictureField>
@@ -397,6 +401,7 @@
 					<Border width="1">
 						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
 					</Border>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="МобильныеУстройстваСтатусНастроекИконкаКонтекстноеМеню" id="50"/>
 					<ExtendedTooltip name="МобильныеУстройстваСтатусНастроекИконкаРасширеннаяПодсказка" id="51"/>
 				</PictureField>

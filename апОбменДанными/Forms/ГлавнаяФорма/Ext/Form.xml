@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.6">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -52,6 +52,7 @@
 						<xr:Abs>Picture.png</xr:Abs>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="ДекорацияАгентПлюсКонтекстноеМеню" id="302"/>
 					<ExtendedTooltip name="ДекорацияАгентПлюсРасширеннаяПодсказка" id="303"/>
 				</PictureDecoration>
@@ -78,6 +79,7 @@
 					<Height>1</Height>
 					<HorizontalStretch>true</HorizontalStretch>
 					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<FileDragMode>AsFile</FileDragMode>
 					<ContextMenu name="ДекорацияКоманднаяПанельКонтекстноеМеню" id="294"/>
 					<ExtendedTooltip name="ДекорацияКоманднаяПанельРасширеннаяПодсказка" id="295"/>
 				</PictureDecoration>
@@ -153,6 +155,7 @@
 								<xr:Abs>Picture.png</xr:Abs>
 								<xr:LoadTransparent>false</xr:LoadTransparent>
 							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
 							<ContextMenu name="ВодяныеЗнакиКонтекстноеМеню" id="161"/>
 							<ExtendedTooltip name="ВодяныеЗнакиРасширеннаяПодсказка" id="162"/>
 						</PictureDecoration>
@@ -193,6 +196,7 @@
 							<VerticalLines>false</VerticalLines>
 							<SearchOnInput>DontUse</SearchOnInput>
 							<HorizontalStretch>false</HorizontalStretch>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>тзРазделы</DataPath>
 							<CommandSet>
 								<ExcludedCommand>Add</ExcludedCommand>
@@ -274,6 +278,7 @@
 												<xr:Abs>ValuesPicture.png</xr:Abs>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</ValuesPicture>
+											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="РазделыИконкаРазделаКонтекстноеМеню" id="289"/>
 											<ExtendedTooltip name="РазделыИконкаРазделаРасширеннаяПодсказка" id="290"/>
 										</PictureField>
@@ -489,6 +494,7 @@
 																					<v8:content>Декорация замечания отступ</v8:content>
 																				</v8:item>
 																			</Title>
+																			<FileDragMode>AsFile</FileDragMode>
 																			<ContextMenu name="ДекорацияЗамечанияОтступКонтекстноеМеню" id="396"/>
 																			<ExtendedTooltip name="ДекорацияЗамечанияОтступРасширеннаяПодсказка" id="397"/>
 																		</PictureDecoration>
@@ -642,6 +648,7 @@
 																			<v8:content>Декорация замечания отступ</v8:content>
 																		</v8:item>
 																	</Title>
+																	<FileDragMode>AsFile</FileDragMode>
 																	<ContextMenu name="ДекорацияЗамечанияОтступ1КонтекстноеМеню" id="403"/>
 																	<ExtendedTooltip name="ДекорацияЗамечанияОтступ1РасширеннаяПодсказка" id="404"/>
 																</PictureDecoration>
@@ -748,6 +755,7 @@
 																		<xr:Abs>Picture.gif</xr:Abs>
 																		<xr:LoadTransparent>false</xr:LoadTransparent>
 																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
 																	<ContextMenu name="ДекорацияЗапускОбменаКонтекстноеМеню" id="349"/>
 																	<ExtendedTooltip name="ДекорацияЗапускОбменаРасширеннаяПодсказка" id="350"/>
 																</PictureDecoration>
@@ -812,6 +820,7 @@
 																	<Border width="1">
 																		<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 																	</Border>
+																	<FileDragMode>AsFile</FileDragMode>
 																	<ContextMenu name="ДекорацияИнформацияРазделительКонтекстноеМеню" id="449"/>
 																	<ExtendedTooltip name="ДекорацияИнформацияРазделительРасширеннаяПодсказка" id="450"/>
 																</PictureDecoration>
@@ -1161,7 +1170,6 @@
 													</Events>
 												</LabelDecoration>
 												<LabelDecoration name="СправочникВидыЗадач" id="619">
-													<Enabled>false</Enabled>
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1332,7 +1340,6 @@
 													</Events>
 												</LabelDecoration>
 												<LabelDecoration name="ДокументыЗаданий" id="616">
-													<Enabled>false</Enabled>
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1720,6 +1727,7 @@
 													<Border width="1">
 														<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 													</Border>
+													<FileDragMode>AsFile</FileDragMode>
 													<ContextMenu name="ДекорацияСервисРазделительКонтекстноеМеню" id="417"/>
 													<ExtendedTooltip name="ДекорацияСервисРазделительРасширеннаяПодсказка" id="418"/>
 												</PictureDecoration>
@@ -1960,6 +1968,7 @@
 																			<Border width="1">
 																				<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 																			</Border>
+																			<FileDragMode>AsFile</FileDragMode>
 																			<ContextMenu name="ДекорацияИнформацияРазделительВидеоКонтекстноеМеню" id="490"/>
 																			<ExtendedTooltip name="ДекорацияИнформацияРазделительВидеоРасширеннаяПодсказка" id="491"/>
 																		</PictureDecoration>
@@ -2065,6 +2074,7 @@
 											<Border width="1">
 												<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
 											</Border>
+											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="ДекорацияПодвалРазделительКонтекстноеМеню" id="380"/>
 											<ExtendedTooltip name="ДекорацияПодвалРазделительРасширеннаяПодсказка" id="381"/>
 										</PictureDecoration>
@@ -2101,6 +2111,7 @@
 														<xr:Abs>Picture.png</xr:Abs>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
 													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
 													<ContextMenu name="ДекорацияЛККонтекстноеМеню" id="436"/>
 													<ExtendedTooltip name="ДекорацияЛКРасширеннаяПодсказка" id="437"/>
 												</PictureDecoration>
@@ -2113,6 +2124,7 @@
 															<v8:content>Декорация подвал отступ слева</v8:content>
 														</v8:item>
 													</Title>
+													<FileDragMode>AsFile</FileDragMode>
 													<ContextMenu name="ДекорацияПодвалОтступСлеваКонтекстноеМеню" id="411"/>
 													<ExtendedTooltip name="ДекорацияПодвалОтступСлеваРасширеннаяПодсказка" id="412"/>
 												</PictureDecoration>

@@ -1386,7 +1386,7 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>
 						<dcscor:parameter>ТипДиаграммы.Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" kind="AutoFont"/>
+						<dcscor:value xsi:type="v8ui:Font" ref="0:14ef2331-6d9b-4cf1-90f3-7d4ac410439d" kind="StyleItem"/>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:use>false</dcscor:use>

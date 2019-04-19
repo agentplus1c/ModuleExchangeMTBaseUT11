@@ -10580,7 +10580,7 @@
 	<line width="1" gap="false">
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">LargeDashed</v8ui:style>
 	</line>
-	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute"/>
+	<font faceName="Arial" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
@@ -10718,17 +10718,17 @@
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>72</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
@@ -10838,48 +10838,48 @@
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>161</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>249</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>263</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>302</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>219</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<width>155</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>155</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
 		<rightBorder>0</rightBorder>
 		<width>74</width>
-		<backColor>auto</backColor>
+		<backColor>0:42544966-445d-41b8-b6a0-a52c64758232</backColor>
 	</format>
 	<format>
 		<leftBorder>0</leftBorder>
