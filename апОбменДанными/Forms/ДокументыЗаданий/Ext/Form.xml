@@ -85,15 +85,15 @@
 					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="113"/>
 					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="114"/>
 				</LabelDecoration>
-				<Button name="ПоказатьПартнеров" id="115">
-					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ПоказатьПартнеров</CommandName>
-					<ExtendedTooltip name="ПоказатьПартнеровРасширеннаяПодсказка" id="116"/>
-				</Button>
 				<Button name="ПоказатьСправочникВидыЗадач" id="160">
 					<Type>Hyperlink</Type>
 					<CommandName>Form.Command.ПоказатьСправочникВидыЗадач</CommandName>
 					<ExtendedTooltip name="ПоказатьСправочникВидыЗадачРасширеннаяПодсказка" id="161"/>
+				</Button>
+				<Button name="ПоказатьПартнеров" id="115">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПоказатьПартнеров</CommandName>
+					<ExtendedTooltip name="ПоказатьПартнеровРасширеннаяПодсказка" id="116"/>
 				</Button>
 				<PictureDecoration name="ДекорацияКоманднаяПанель" id="61">
 					<Enabled>false</Enabled>

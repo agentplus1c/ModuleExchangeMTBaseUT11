@@ -63,11 +63,11 @@
 						<Event name="Click">КомандаПоказатьГлавнуюФорму</Event>
 					</Events>
 				</PictureDecoration>
-				<Button name="ПоказатьГлавнуюФорму" id="6">
+				<Button name="ПоказатьГлавнуюФорму" id="345">
 					<Type>Hyperlink</Type>
 					<Representation>PictureAndText</Representation>
 					<CommandName>Form.Command.ПоказатьГлавнуюФорму</CommandName>
-					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="7"/>
+					<ExtendedTooltip name="ПоказатьГлавнуюФормуРасширеннаяПодсказка" id="346"/>
 				</Button>
 				<LabelDecoration name="ДекорацияСмТакже" id="8">
 					<Title formatted="false">
@@ -85,20 +85,20 @@
 					<ContextMenu name="ДекорацияСмТакжеКонтекстноеМеню" id="9"/>
 					<ExtendedTooltip name="ДекорацияСмТакжеРасширеннаяПодсказка" id="10"/>
 				</LabelDecoration>
-				<Button name="ПоказатьПартнеров" id="13">
+				<Button name="ПоказатьДокументыЗаданий" id="11">
 					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ПоказатьПартнеров</CommandName>
-					<ExtendedTooltip name="ПоказатьПартнеровРасширеннаяПодсказка" id="14"/>
+					<CommandName>Form.Command.ПоказатьДокументыЗаданий</CommandName>
+					<ExtendedTooltip name="ПоказатьДокументыЗаданийРасширеннаяПодсказка" id="12"/>
 				</Button>
 				<Button name="ПоказатьСправочникВидыЗадач" id="343">
 					<Type>Hyperlink</Type>
 					<CommandName>Form.Command.ПоказатьСправочникВидыЗадач</CommandName>
 					<ExtendedTooltip name="ПоказатьСправочникВидыЗадачРасширеннаяПодсказка" id="344"/>
 				</Button>
-				<Button name="ПоказатьДокументыЗаданий" id="11">
+				<Button name="ПоказатьПартнеров" id="13">
 					<Type>Hyperlink</Type>
-					<CommandName>Form.Command.ПоказатьДокументыЗаданий</CommandName>
-					<ExtendedTooltip name="ПоказатьДокументыЗаданийРасширеннаяПодсказка" id="12"/>
+					<CommandName>Form.Command.ПоказатьПартнеров</CommandName>
+					<ExtendedTooltip name="ПоказатьПартнеровРасширеннаяПодсказка" id="14"/>
 				</Button>
 				<PictureDecoration name="ДекорацияКоманднаяПанель" id="17">
 					<Enabled>false</Enabled>
@@ -1533,26 +1533,6 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="ПоказатьГлавнуюФорму" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>На главную</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Перейти на главную страницу</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Use>
-				<xr:Common>false</xr:Common>
-			</Use>
-			<Shortcut>Ctrl+M</Shortcut>
-			<Action>КомандаВыполнить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
 		<Command name="Справка" id="2">
 			<Title>
 				<v8:item>
@@ -1749,6 +1729,23 @@
 					<v8:content>Показать справочник виды задач</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Action>КомандаВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьГлавнуюФорму" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На главную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти на главную страницу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+M</Shortcut>
 			<Action>КомандаВыполнить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
