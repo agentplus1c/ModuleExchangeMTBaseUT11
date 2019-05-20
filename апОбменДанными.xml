@@ -19,7 +19,7 @@
 					<v8:content>Агент Плюс: Обмен данными с мобильными устройствами</v8:content>
 				</v8:item>
 			</Synonym>
-			<Comment>Обмен данными с мобильными устройствами (ver 2.0.2.79 - не убирать!) </Comment>
+			<Comment>Обмен данными с мобильными устройствами (ver 2.0.2.80 - не убирать!) </Comment>
 			<DefaultForm>ExternalDataProcessor.апОбменДанными.Form.ГлавнаяФорма</DefaultForm>
 			<AuxiliaryForm/>
 		</Properties>
