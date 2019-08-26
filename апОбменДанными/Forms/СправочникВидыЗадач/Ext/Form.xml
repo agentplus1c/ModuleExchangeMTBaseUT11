@@ -156,7 +156,6 @@
 				<ExtendedTooltip name="ТПЭлементыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<Events>
-				<Event name="ValueChoice">ТПЭлементыВыборЗначения</Event>
 				<Event name="Selection">ТПЭлементыВыбор</Event>
 				<Event name="BeforeAddRow">ТПЭлементыПередНачаломДобавления</Event>
 				<Event name="BeforeDeleteRow">ТПЭлементыПередУдалением</Event>

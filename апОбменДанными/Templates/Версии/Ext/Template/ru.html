@@ -1,38 +1,55 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
 <blockquote dir="ltr">
 <h2>История версий обработки обмена данными</h2></blockquote>
-<p><strong>2.0.2.84 </strong><strong>(14.06.19)</strong></p><blockquote dir="ltr">
-<ul><li>Добавлена общая настройка : "Загружать документы в ЦБД текущей датой".</li>
-<li>Помеченные на удаление единицы измерения больше не выгружаются.</li>
-<li>Исправлена ошибка выгрузки артикулов номенклатуры.</li></ul></blockquote>
+<p><strong>2.0.2.89 </strong><strong>(09.07.19)</strong></p>
+<blockquote dir="ltr">
+<ul><li>Для документов задание, добавлен новый тип задачи "Сделать фото". Тип задачи предполагает, что торговый агент должен сделать снимок с помощью фотокамеры МУ. Новый тип задания доступен: Главная - Справочники - Виды задач - Добавить - Сделать фото. 
+</li><li>Исправления для конфигурации Управление торговлей, редакция 11.4 (11.4.8.73) и выше: 
+<ul><li>Доработка отчета по фотографиям документов мерчендайзинг, для совместимости работы с конфигурацией Управление торговлей, редакция 11.4 (11.4.8.73) </li></ul></li></ul></blockquote>
+<p><strong>2.0.2.88 </strong><strong>(04.07.19)</strong></p>
+<blockquote dir="ltr">
+<ul><li>Изменена выгрузка штрих-кодов номенклатуры. При отмеченных настройках "Выгружать штрих-коды" и "Выгружать характеристики номенклатуры" выгружаются только штрих-коды выгруженных номенклатур и характеристик номенклатур. При не отмеченной настройке  "Выгружать характеристики номенклатуры", выгружаются штрих-коды номенклатур, штрих-коды характеристик выгружаются с идентификаторами соответствующих номенклатур.  Настройки доступны: "Обмен данными" - "Общие настройки". 
+</li><li>Исправления для конфигурации Управление торговлей, редакция 11.4 (11.4.8.73) и выше: 
+<ul><li>Доработка механизма добавления внешнего модуля обмена данными "Агент Плюс" как внешнюю обработку (НСИ и администрирование - Печатные формы, отчеты и обработки - Дополнительные отчеты и обработки)</li></ul></li></ul></blockquote>
+<p><strong>2.0.2.87 </strong><strong>(02.07.19)</strong></p>
+<blockquote dir="ltr">
+<ul><li>Добавлена новая настройка мобильного приложения "Отображать остатки товара по выбранному складу по умолчанию".  Настройка доступна: "Обмен данными" - "Настройки торговых агентов" -  "Настройки мобильного приложения" - "Документы" - "Настройки для документов продажи" - "Отображать остатки товара по выбранному складу по умолчанию". В типовом приложении «Агент Плюс: Мобильная торговля» при подборе товара в документ по умолчанию отображается общий остаток товара по всем складам, независимо от выбранного склада на вкладке «Основные» документа. В приложении «Агент Плюс: Мобильная торговля» версии 1.0.21.0 регулирование этой настройки было добавлено в контекстное меню окна подбора товара. При долгом удержании на форме подбора можно выбрать пункт «Остатки по выбранному складу» («Остатки по всем складам»). Фильтрация остатков товаров по выбранному складу доступна только для первых пяти складов, переданных в файле выгрузке «FromCDB.xml». Для последующих складов фильтрация будет недоступна, а приложение будет выводить сообщение «Остатки по выбранному складу недоступны из-за ограничения максимального количества складов!». 
+</li><li>Исправлена ошибка выгрузки общих характеристик номенклатуры.</li></ul></blockquote>
+<p><strong>2.0.2.86 </strong><strong>(21.06.19)</strong></p>
+<blockquote dir="ltr">
+<ul><li>Исправлена выгрузка/загрузка характеристик товаров. 
+</li><li>В плане посещения появилась возможность расширять колонки. 
+</li><li><span style="ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); font-variant-ligatures: normal">Добавлено резервирование товаров заказа при соответствующем статусе.</span></li></ul></blockquote>
+<p><strong>2.0.2.85 </strong><strong>(17.06.19)</strong></p>
+<blockquote dir="ltr">
+<ul><li>Доработан отчет "Контроль передвижения агентов" для платформы 8.3.14  </li></ul></blockquote>
+<p><strong>2.0.2.84 </strong><strong>(14.06.19)</strong></p>
+<blockquote dir="ltr">
+<ul><li>Добавлена общая настройка : "Загружать документы в ЦБД текущей датой". 
+</li><li>Помеченные на удаление единицы измерения больше не выгружаются. 
+</li><li>Исправлена ошибка выгрузки артикулов номенклатуры.</li></ul></blockquote>
 <p><strong>2.0.2.81 </strong><strong>(22.05.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Доработана выгрузка документов долг.</li></ul></blockquote>
 <p><strong>2.0.2.78 </strong><strong>(06.05.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправлена выгрузка справочника "Номенклатура" с нулевыми остатками. 
-</li>
-<li>Исправления для конфигурации Управление торговлей, редакция 11.2 (11.2.3.95):  
+</li><li>Исправления для конфигурации Управление торговлей, редакция 11.2 (11.2.3.95):  
 <ul><li>Доработана загрузка документов  "Заказ клиента", "Реализация товаров и услуг", "Поступление товаров", "Приходный кассовый ордер" и "Расходный кассовый ордер".</li></ul></li></ul></blockquote>
 <p><strong>2.0.2.75 </strong><strong>(19.04.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Добавлен новый тип документов "Задание". Документ "Задание" предназначен для постановки сотруднику списка задач, которые ему необходимо выполнить в течение дня. Например, создание какого-либо документа, обмен данными и т.п. (Главная - Документы - Задание). 
-</li>
-<li>Добавлен новый справочник "Виды задач". Справочник предназначен для хранения списка задач, которые могут использоваться для документа "Задание". (Главная - Справочники - Виды задач). 
-</li>
-<li>В отчет "Выполнение плана посещений" добавлена настройка "Список торговых точек". При заполнении списка торговых точек, в отчете появляется возможность  проанализировать план/факт визитов сразу по нескольким маршрутам. Если настройка не заполнена, то отображаются только торговые точки, закрепленные за агентом (в настройках агента, поле "Маршрут"). 
-</li>
-<li>Изменен контактный номер технической поддержки. </li></ul></blockquote>
+</li><li>Добавлен новый справочник "Виды задач". Справочник предназначен для хранения списка задач, которые могут использоваться для документа "Задание". (Главная - Справочники - Виды задач). 
+</li><li>В отчет "Выполнение плана посещений" добавлена настройка "Список торговых точек". При заполнении списка торговых точек, в отчете появляется возможность  проанализировать план/факт визитов сразу по нескольким маршрутам. Если настройка не заполнена, то отображаются только торговые точки, закрепленные за агентом (в настройках агента, поле "Маршрут"). 
+</li><li>Изменен контактный номер технической поддержки. </li></ul></blockquote>
 <p><strong>2.0.2.72 </strong><strong>(10.04.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Добавлена настройка "Выгружать долги только по документам агента." Настройка доступна: "Обмен данными" - "Общие настройки" -  вкладка "Основные" 
-</li>
-<li>Добавлена дополнительная настройка проведения документов. Появилась возможность<span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"> </span>настроить список типов документов, которые при загрузке нужно проводить. Настройка доступна: "Обмен данными" - "Общие настройки" -  вкладка "Основные" - ссылка "настроить" напротив настройки "Проводить документы".</li></ul></blockquote>
+</li><li>Добавлена дополнительная настройка проведения документов. Появилась возможность<span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"> </span>настроить список типов документов, которые при загрузке нужно проводить. Настройка доступна: "Обмен данными" - "Общие настройки" -  вкладка "Основные" - ссылка "настроить" напротив настройки "Проводить документы".</li></ul></blockquote>
 <p><strong>2.0.2.69 </strong><strong>(22.03.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Оптимизация выгрузки основных справочников. 
-</li>
-<li>Корректировка выгрузки остатков и цен номенклатуры.</li></ul></blockquote>
+</li><li>Корректировка выгрузки остатков и цен номенклатуры.</li></ul></blockquote>
 <p><strong>2.0.2.67 </strong><strong>(12.03.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Убрано использование внешней компоненты APPlus.dll.</li></ul></blockquote>
@@ -51,8 +68,7 @@
 <p><strong>2.0.2.60 </strong><strong>(11.02.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправления для конфигурации 1С:ERP Управление предприятием 2: 
-<ul><li>Доработка модуля обмена данными до версии 2.4.6.200</li></ul></li>
-<li>Реквизит "Адрес доставки" при загрузке документов "Заказ" и "Реализация" заполняется из контактной информации партнера. </li></ul></blockquote>
+<ul><li>Доработка модуля обмена данными до версии 2.4.6.200</li></ul></li><li>Реквизит "Адрес доставки" при загрузке документов "Заказ" и "Реализация" заполняется из контактной информации партнера. </li></ul></blockquote>
 <p><strong>2.0.2.56 </strong><strong>(17.01.19)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправления для конфигурации Управление торговлей и взаимоотношениями с клиентами:, версия продукта (3.0.14.11) :  
@@ -64,18 +80,15 @@
 <p><strong>2.0.2.51 </strong><strong>(17.12.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Настройка "Торговля с колес" перенесена из общих настроек в настройки мобильного приложения и настраивается персонально для каждого агента. 
-</li>
-<li>Добавлена проверка формата строки при загрузке GPS треков.</li></ul></blockquote>
+</li><li>Добавлена проверка формата строки при загрузке GPS треков.</li></ul></blockquote>
 <p><strong>2.0.2.50 </strong><strong>(14.12.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Доработка модуля обмена данными до версии УТ 11.4.6.166</li></ul></blockquote>
 <p><strong>2.0.2.48 </strong><strong> (04.12.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Пр<span style="FONT-SIZE: 14px; FONT-FAMILY: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Meiryo UI&quot;, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Times New Roman"><font size="3"><span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font size="3" face="Times New Roman">и включенных </font></span><span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Times New Roman"><font size="3">настройках "Режим выгрузки "Рекомендуемый" и "Использовать контрагентов" помимо партнеров отбора "выгружаемые данные" выгружаются их головные партнеры.</font></font></span></font></font></span> 
-</li>
-<li><span style="FONT-SIZE: 14px; FONT-FAMILY: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Meiryo UI&quot;, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font size="3" face="Times New Roman">Изменена форма список торговых точек (вкладка торговые агенты).</font></span></span> 
-</li>
-<li><span style="FONT-SIZE: 14px; FONT-FAMILY: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Meiryo UI&quot;, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Times New Roman"><font size="3" face="Times New Roman"><span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font size="3" face="Times New Roman">Изменена логика настройки "Только виды цен из соглашений".</font> </span></font></font></span></li></ul></blockquote>
+</li><li><span style="FONT-SIZE: 14px; FONT-FAMILY: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Meiryo UI&quot;, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font size="3" face="Times New Roman">Изменена форма список торговых точек (вкладка торговые агенты).</font></span></span> 
+</li><li><span style="FONT-SIZE: 14px; FONT-FAMILY: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Meiryo UI&quot;, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(68,68,68); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Times New Roman"><font size="3" face="Times New Roman"><span style="FONT-SIZE: 12px; FONT-FAMILY: tahoma, arial, verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font size="3" face="Times New Roman">Изменена логика настройки "Только виды цен из соглашений".</font> </span></font></font></span></li></ul></blockquote>
 <p><strong>2.0.2.46 </strong><strong> (29.11.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Добавлена настройка "Разрешить создавать заявку на возврат". Настройка позволяет в МУ создавать документ "Возврат" в виде документа "Заявка на возврат".</li></ul></blockquote>
@@ -83,41 +96,29 @@
 <blockquote dir="ltr">
 <ul><li>Отчет "Контроль передвижения агентов":   
 <ul><li>Добавлена настройка "Кратные временные промежутки".  
-</li>
-<li>Добавлена настройка "Оптимизация GPS трека".  
-</li>
-<li>Ускорение работы отчета. 
-</li>
-<li>Исправлены ошибки отображения карты. </li></ul></li></ul></blockquote>
+</li><li>Добавлена настройка "Оптимизация GPS трека".  
+</li><li>Ускорение работы отчета. 
+</li><li>Исправлены ошибки отображения карты. </li></ul></li></ul></blockquote>
 <p><strong>2.0.2.40 </strong><strong> (07.11.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Доработка выгрузки "Планов продаж":   
 <ul><li>Добавлена выгрузка планов продаж по товарной категории. 
-</li>
-<li>Изменен механизм определения основного плана продаж. 
-</li>
-<li>Оптимизирована выгрузка планов продаж. 
-</li>
-<li>Изменен алгоритм определения выполнения планов продаж.</li></ul></li>
-<li>Доработка выгрузки группировок номенклатуры: 
+</li><li>Изменен механизм определения основного плана продаж. 
+</li><li>Оптимизирована выгрузка планов продаж. 
+</li><li>Изменен алгоритм определения выполнения планов продаж.</li></ul></li><li>Доработка выгрузки группировок номенклатуры: 
 <ul><li>Добавлена выгрузка группировок номенклатуры по товарной категории. 
-</li>
-<li>Исправлена выгрузка группировок по группам и видам номенклатуры.</li></ul></li></ul></blockquote>
+</li><li>Исправлена выгрузка группировок по группам и видам номенклатуры.</li></ul></li></ul></blockquote>
 <p><strong>2.0.2.37 </strong><strong> (09.10.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Доработка "Фотоотчета":   
 <ul><li>Иконка удаленности создания фотографии от торговой точки). 
-</li>
-<li>Исправлены выявленные ошибки. </li></ul></li>
-<li>Исправления для конфигурации Управление торговлей и взаимоотношениями с клиентами:, версия продукта (3.0.11.1) : 
+</li><li>Исправлены выявленные ошибки. </li></ul></li><li>Исправления для конфигурации Управление торговлей и взаимоотношениями с клиентами:, версия продукта (3.0.11.1) : 
 <ul><li>Доработка модуля обмена данными, для совместимости работы с конфигурацией "Управление торговлей и взаимоотношениями с клиентами":, версия продукта (3.0.11.1). 
-</li>
-<li>Исправлена ошибка "ЗаполнитьУсловияПродажПоСоглашению".  </li></ul></li></ul></blockquote>
+</li><li>Исправлена ошибка "ЗаполнитьУсловияПродажПоСоглашению".  </li></ul></li></ul></blockquote>
 <p><strong>2.0.2.36 </strong><strong> (05.10.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Доработка "Фотоотчета":   
-<ul><li>Исправлены выявленные ошибки. </li></ul></li>
-<li>Исправления для конфигурации УТ для Казахстана, редакция 3.2 : 
+<ul><li>Исправлены выявленные ошибки. </li></ul></li><li>Исправления для конфигурации УТ для Казахстана, редакция 3.2 : 
 <ul><li>Доработка модуля обмена данными, для совместимости работы с УТ для Казахстана, редакция 3.2 (3.2.3.10) </li></ul></li></ul></blockquote>
 <p><strong>2.0.2.34 </strong><strong> (24.09.18)</strong></p>
 <blockquote dir="ltr">
@@ -125,10 +126,8 @@
 <p><strong>2.0.2.33 </strong><strong> (21.09.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Добавлен отчёт: "Фототчет". Отчёт по фотографиям документов мерчендайзинг (Главная - Планирование и контроль - Фотоотчет). 
-</li>
-<li>В документах "мерчендайзинг" добавлена возможность просмотра, редактирования, добавления и удаления фотографий прикрепленных к документу.  
-</li>
-<li>Загрузка фотографий с МУ для документа "Мерчендайзинг".</li></ul></blockquote>
+</li><li>В документах "мерчендайзинг" добавлена возможность просмотра, редактирования, добавления и удаления фотографий прикрепленных к документу.  
+</li><li>Загрузка фотографий с МУ для документа "Мерчендайзинг".</li></ul></blockquote>
 <p><strong>2.0.2.32 </strong><strong> (19.09.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправления для конфигурации Комплексная автоматизация 2: 
@@ -140,10 +139,8 @@
 <p><strong>2.0.2.27 </strong><strong> (14.08.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправлена ошибка выгрузки изображений товаров. 
-</li>
-<li>Исправлена выгрузка признака учета персональных цен. 
-</li>
-<li>Исправлена выгрузка настройки мобильного приложения: "Список закладок журнала документов". </li></ul></blockquote>
+</li><li>Исправлена выгрузка признака учета персональных цен. 
+</li><li>Исправлена выгрузка настройки мобильного приложения: "Список закладок журнала документов". </li></ul></blockquote>
 <p><strong>2.0.2.24 </strong><strong> (25.07.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Добавлена возможность использовать "Планы продаж" в МУ. </li></ul></blockquote>
@@ -151,18 +148,15 @@
 <blockquote dir="ltr">
 <ul><li>Исправления для конфигурации УТ для Казахстана, редакция 3.2 : 
 <ul><li>Доработка модуля обмена данными, для совместимости работы с УТ для Казахстана, редакция 3.2 (3.2.2.22) 
-</li>
-<li>Исправление загрузки документов "Реализация товаров и услуг", ПКО и РКО.    </li></ul></li></ul></blockquote>
+</li><li>Исправление загрузки документов "Реализация товаров и услуг", ПКО и РКО.    </li></ul></li></ul></blockquote>
 <p><strong>2.0.2.21 </strong><strong> (17.07.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправлена загрузка документов "Реализация товаров и услуг", при загрузке учитывается налогооблажение. </li></ul></blockquote>
 <p><strong>2.0.2.20 </strong><strong> (13.07.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Добавлена опция "Режим выгрузки "Рекомендуемый"". Данная опция изменяет режим выгрузки справочников "Контрагенты" и "ТорговыеТочки" в мобильное устройство. 
-</li>
-<li>Доработана загрузка треков (обработка пустых строк в файле трэков). 
-</li>
-<li>Доработана загрузка фотографий (изменена загрузка фотографий, когда файл архива без фотографий, а в xml есть теги фотографий). </li></ul></blockquote>
+</li><li>Доработана загрузка треков (обработка пустых строк в файле трэков). 
+</li><li>Доработана загрузка фотографий (изменена загрузка фотографий, когда файл архива без фотографий, а в xml есть теги фотографий). </li></ul></blockquote>
 <p><strong>2.0.2.11 </strong><strong> (26.06.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправления для конфигурации УТ для Украины, редакция 3.1: 
@@ -196,16 +190,14 @@
 <blockquote dir="ltr">
 <ul><li>Добавлена новая константа "Запретить продажи без указания цены" (доступна на форме "Общие настройки", закладка "Основные") - включается запрет оформление в МУ документов "Заказ" если у выбранного в документе клиента не определена "цена продажи по умолчанию". Например, когда в выбранном соглашении не указана цена продажи. Данная константа поддердивается в МТ версии <strong>не ниже 1.0.21.4</strong>. </li></ul><ul><li>Исправления для конфигурации УТ 3.1 для Украины: 
 <ul><li>Исправлена ошибка загрузки документа "Возврат товаров от клиента". 
-</li>
-<li>Исправлена ошибка загрузки документа "Реализация". </li></ul></li></ul></blockquote>
+</li><li>Исправлена ошибка загрузки документа "Реализация". </li></ul></li></ul></blockquote>
 <p style="MARGIN-RIGHT: 0px" dir="ltr"><strong>2.0.1.8 (04.05.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li align="left">Для конфигурации "Управление торговлей алкогольной продукцией 8" добавлена возможность, при использовании пуктов разгрузки, в МУ в качестве "клиента"предоставляется возможность использовать не только контрагентов, но и партнеров. Также, при создании документов заказов и реализаций в МУ использовать договоры или соглашения. </li></ul></blockquote>
 <p><strong>2.0.1.6 (20.04.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Начиная с версии <strong>2.0.1.6 </strong>в обработке ведется история версий обработки. 
-</li>
-<li>Исправлена ошибка - при загрузке файла обмена в УТ из zip-архива выдавалась ошибка и останавливалось регламентное задание, если архив был поврежден. </li></ul></blockquote>
+</li><li>Исправлена ошибка - при загрузке файла обмена в УТ из zip-архива выдавалась ошибка и останавливалось регламентное задание, если архив был поврежден. </li></ul></blockquote>
 <p><strong>2.0.1.5 (20.04.18)</strong></p>
 <blockquote dir="ltr">
 <ul><li>Исправлена ошибка - если справочник МУ в ЛК был пустой, то при попытке загрузки справочника МУ из ЛК происходила ошибка. </li></ul></blockquote>

@@ -163,7 +163,6 @@
 				</Button>
 				<Button name="Фотографии" id="218">
 					<Type>CommandBarButton</Type>
-					<Visible>false</Visible>
 					<CommandName>Form.Command.ПрикрепленныеФотографии</CommandName>
 					<ExtendedTooltip name="ФотографииРасширеннаяПодсказка" id="219"/>
 				</Button>
@@ -804,6 +803,7 @@
 							<Events>
 								<Event name="OnEditEnd">ЗадачиПриОкончанииРедактирования</Event>
 								<Event name="Selection">ЗадачиВыбор</Event>
+								<Event name="BeforeDeleteRow">ЗадачиПередУдалением</Event>
 								<Event name="OnActivateField">ЗадачиПриАктивизацииПоля</Event>
 								<Event name="BeforeRowChange">ЗадачиПередНачаломИзменения</Event>
 								<Event name="OnChange">ЗадачиПриИзменении</Event>

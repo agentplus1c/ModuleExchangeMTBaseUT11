@@ -30,8 +30,8 @@
 		<!-- vd_181128 meta http-equiv="X-UA-Compatible" content="IE=Edge" /-->
 		<!-- vd_181128 META content="text/html; charset=utf-8" http-equiv=Content-Type-->														
 
-		<script src="http://www.openlayers.org/api/OpenLayers.js" type="text/javascript"></script>
-		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 														
+		<script src="https://openlayers.org/api/OpenLayers.js" type="text/javascript"></script>
+		<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script> 														
 
 		<script type="text/javascript">														
 
@@ -138,7 +138,7 @@
 				
 				RemovePopup();
 
-			    text = '<STRONG>' + this.title + '</STRONG>' + //'<a href="http://www.agentplus.ru/">Открыть карточку</a>' +  
+			    text = '<STRONG>' + this.title + '</STRONG>' + //'<a href="https://agentplus.ru/">Открыть карточку</a>' +  
 						 '<br>' + this.body + 
 						 '<br><FONT style="BACKGROUND-COLOR: #f5f2dd" size=2>' + this.footer + '</FONT>';
 			
@@ -358,7 +358,7 @@
 		</SCRIPT>														
 
 		<META name=GENERATOR content="MSHTML 8.00.7600.16671">                                          
-		<LINK rel=stylesheet type=text/css href="http://www.openlayers.org/api/theme/default/style.css">
+		<LINK rel=stylesheet type=text/css href="https://openlayers.org/api/theme/default/style.css">
 
 	</HEAD> 
 

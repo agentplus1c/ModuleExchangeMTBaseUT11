@@ -100,6 +100,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="АгентыКонтекстноеМеню" id="40"/>
 							<ExtendedTooltip name="АгентыРасширеннаяПодсказка" id="41"/>
+							<Events>
+								<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
+							</Events>
 						</InputField>
 						<InputField name="Детализация" id="42">
 							<DataPath>Детализация</DataPath>
@@ -115,6 +118,7 @@
 							<ContextMenu name="ДетализацияКонтекстноеМеню" id="43"/>
 							<ExtendedTooltip name="ДетализацияРасширеннаяПодсказка" id="44"/>
 							<Events>
+								<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
 								<Event name="StartChoice">СписокЗначенийНачалоВыбора</Event>
 							</Events>
 						</InputField>
@@ -143,6 +147,9 @@
 							<ClearButton>true</ClearButton>
 							<ContextMenu name="ПланПродажКонтекстноеМеню" id="22"/>
 							<ExtendedTooltip name="ПланПродажРасширеннаяПодсказка" id="23"/>
+							<Events>
+								<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
+							</Events>
 						</InputField>
 						<UsualGroup name="Период" id="28">
 							<Title>
@@ -173,6 +180,9 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДатаНачалоКонтекстноеМеню" id="10"/>
 									<ExtendedTooltip name="ДатаНачалоРасширеннаяПодсказка" id="11"/>
+									<Events>
+										<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
+									</Events>
 								</InputField>
 								<LabelDecoration name="Декорация1" id="30">
 									<Title formatted="false">
@@ -196,6 +206,9 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ДатаКонецКонтекстноеМеню" id="13"/>
 									<ExtendedTooltip name="ДатаКонецРасширеннаяПодсказка" id="14"/>
+									<Events>
+										<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
+									</Events>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
@@ -225,6 +238,9 @@
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ПланированиеПоСуммеКонтекстноеМеню" id="19"/>
 							<ExtendedTooltip name="ПланированиеПоСуммеРасширеннаяПодсказка" id="20"/>
+							<Events>
+								<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
+							</Events>
 						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
@@ -260,6 +276,7 @@
 							<ContextMenu name="ДетализацияДиаграммыКонтекстноеМеню" id="56"/>
 							<ExtendedTooltip name="ДетализацияДиаграммыРасширеннаяПодсказка" id="57"/>
 							<Events>
+								<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
 								<Event name="StartChoice">СписокЗначенийНачалоВыбора</Event>
 							</Events>
 						</InputField>
@@ -275,6 +292,7 @@
 							<ContextMenu name="ВариантДиаграммыКонтекстноеМеню" id="51"/>
 							<ExtendedTooltip name="ВариантДиаграммыРасширеннаяПодсказка" id="52"/>
 							<Events>
+								<Event name="OnChange">СобытиеПриИзмененииНастроек</Event>
 								<Event name="StartChoice">СписокЗначенийНачалоВыбора</Event>
 							</Events>
 						</InputField>

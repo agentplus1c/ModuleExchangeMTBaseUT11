@@ -521,8 +521,12 @@
 						<SpreadSheetDocumentField name="ТДПланПосещений" id="87">
 							<DataPath>ТДПланПосещений</DataPath>
 							<TitleLocation>None</TitleLocation>
+							<ShowHeaders>true</ShowHeaders>
 							<VerticalScrollBar>true</VerticalScrollBar>
 							<HorizontalScrollBar>true</HorizontalScrollBar>
+							<Output>Enable</Output>
+							<ShowCellNames>true</ShowCellNames>
+							<ShowRowAndColumnNames>true</ShowRowAndColumnNames>
 							<ContextMenu name="ТДПланПосещенийКонтекстноеМеню" id="88">
 								<ChildItems>
 									<Button name="ТДППКонтекстноеМенюЗаполнитьИзГрафика" id="94">
